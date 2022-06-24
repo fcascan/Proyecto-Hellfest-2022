@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hellfest | 17 - 26 juin 2022</title>
+		<!-- Fuentes: -->
+		<link
+			rel="preload"
+			href="fonts/Tungsten-Semibold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>		
+		<link
+			rel="preload"
+			href="fonts/NeufileGrotesk-Bold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="fonts/NeufileGrotesk-Medium.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="fonts/NeufileGrotesk-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="fonts/NeufileGrotesk-SemiBold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="fonts/MicrogrammaD-BoldExte.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<!-- Mis Estilos: -->
+		<link rel="stylesheet" href="css/estilos.css" />		
+		<!-- Lightslider: -->
+		<link rel="stylesheet" href="/css/lightslider.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="module" src="/js/lightslider.js"></script>
+        <!-- Mis Scripts: -->
+		<script type="module" src="/index.js"></script>
+	</head>
+	<body data-scroll-lock-scrollable>
+		<!------------->
+		<!-- Curtain -->
+		<!------------->
+		<div class="curtainDiv" id="curtain">
+			<img class="curtainLogo" src="img/svgexport-2.svg"/>
+			<img src="img/pattern-light.jpg" style="width: 100%;"> 
+		</div>  
+
+		<!------------>
+		<!-- NAVBAR -->
+		<!------------>
+		<div class="navbarDiv">
+			<a href="#Home">
+				<img
+				class="hellfestLogoImg"
+				src="img/svgexport-2.svg"
+				alt="logo"
+				style="width: 100px; height: 100px"
+				href="#home"
+			/>
+			</a>			
+			<div></div>
+			<div></div>
+			<div></div>
+			<a href="lineup.html">LINE UP</a>
+			<a href="#Experience">EXPERIENCE</a>
+			<a href="#Infos">INFOS</a>
+			<img src="img/svgexport-3.svg" href="#" />
+		</div>
+
+		<!----------->
+		<!-- VIDEO -->
+		<!----------->
+		<div class="videoDiv" id="Home">
+			<br /><br /><br /><br />
+			<video autoplay muted loop class="videoPlayback" id="homeVideo">
+				<source src="video/home-intro.mp4" type="video/mp4" />
+			</video>
+			<br />
+			<span class="mjeSeeYouInHell">SEE<br />YOU IN<br />HELL</span>
+			<img class="letsGoToHellImg" src="img/svgexport-11.png" />
+		</div>
+
+		<!------------------>
+		<!-- SCROLL VENUE -->
+		<!------------------>
+		<br /><br />
+		<div class="scrollDiv1">
+			<span class="scrollText">JUNE 17 - 26 / CLISSON - FRANCE</span>
+		</div>
+
+		<!------------->
+		<!-- LINE UP -->
+		<!------------->
+		<br /><br />
+		<div class="lineupDiv">
+			<div class="lineupInfoDiv">
+				<span class="neufilegroteskSmall" style="font-weight: bold;">ARTISTS</span><br />
+				<span class="filledText">LINE UP</span><br />
+				<img class="separador" src="img/svgexport-12.svg" /><br />
+				<span class="microgrammaNoFill">350</span>
+                <span class="tungstenFilled"> ARTISTS</span><br />
+				<span class="microgrammaNoFill">6</span>
+                <span class="tungstenFilled"> SCENES</span><br />
+				<span class="microgrammaNoFill">7</span>
+                <span class="tungstenFilled"> DAYS</span><br />
+				<button class="button">FULL LINE UP</button><br />
+			</div>
+            <!--
+			<div class="controlesCarouselDiv">
+				<a
+					class="carousel-control-prev"
+					href="#carouselExampleControls"
+					role="button"
+					data-slide="prev"
+					style="rotate: 180deg"
+				>
+					<img src="/img/svgexport-15.svg" />
+				</a>
+				<a
+					class="carousel-control-next"
+					href="#carouselExampleControls"
+					role="button"
+					data-slide="next"
+				>
+					<img src="/img/svgexport-15.svg" />
+				</a>
+			</div>
+			<div
+				id="carouselExampleControls"
+				class="carousel slide"
+				data-interval="false"
+				data-ride="carousel"
+			>
+				
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<div class="card">
+							<img
+								src="img/e207e6.webp"
+								class="card-img-top"
+								alt="Metallica June 26"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">METALLICA</h5>
+								<p class="card-text">THRASH METAL</p>
+								<a href="#Lineup" class="btn card-date">JUNE 26</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/e10eea.webp"
+								class="card-img-top"
+								alt="Guns and Roses June 25"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">GUNS N' ROSES</h5>
+								<p class="card-text">HARD ROCK</p>
+								<a href="#Lineup" class="btn card-date">JUNE 25</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/0287f2.webp"
+								class="card-img-top"
+								alt="Nine Inch Nails June 24"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">NINE INCH NAILS</h5>
+								<p class="card-text">INDUSTRIAL METAL</p>
+								<a href="#Lineup" class="btn card-date">JUNE 24</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/4867c4.webp"
+								class="card-img-top"
+								alt="Scorpions June 23"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">SCORPIONS</h5>
+								<p class="card-text">HARD-ROCK</p>
+								<a href="#Lineup" class="btn card-date">JUNE 23</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/df2c19.webp"
+								class="card-img-top"
+								alt="Gojira June 19"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">GOJIRA</h5>
+								<p class="card-text">DEATH METAL</p>
+								<a href="#Lineup" class="btn card-date">JUNE 19</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/183864.webp"
+								class="card-img-top"
+								alt="Ghost June 18"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">GHOST</h5>
+								<p class="card-text">HEAVY POP</p>
+								<a href="#Lineup" class="btn card-date">JUNE 18</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/0287f2.webp"
+								class="card-img-top"
+								alt="Deftones June 17"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">DEFTONES</h5>
+								<p class="card-text">NEO METAL</p>
+								<a href="#Lineup" class="btn card-date">JUNE 17</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card">
+							<img
+								src="img/438714.webp"
+								class="card-img-top"
+								alt="View the full line up"
+							/>
+							<div class="card-body">
+								<a href="#" class="btn card-date">DISCOVER THE FULL LINE UP</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        -->
+        <br><br><br><br><br><br><br><br>
+        
+        
+    </div>
+    <div class="carousel">
+        <div class="lSSlideOuter">
+            <div class="lSSlideWrapper usingCss">
+            <ul id="content-slider" class="content-slider lightSlider lsGrab lSSlide" style="width: 3240px; transform: translate3d(-810px, 0px, 0px); height: 162px; padding-bottom: 0%;">
+                <li class="lslide active" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/e207e6.webp"
+                            class="card-img-top"
+                            alt="Metallica June 26"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">METALLICA</h5>
+                            <p class="card-text">THRASH METAL</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 26</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/e10eea.webp"
+                            class="card-img-top"
+                            alt="Guns and Roses June 25"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">GUNS N' ROSES</h5>
+                            <p class="card-text">HARD ROCK</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 25</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/0287f2.webp"
+                            class="card-img-top"
+                            alt="Nine Inch Nails June 24"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">NINE INCH NAILS</h5>
+                            <p class="card-text">INDUSTRIAL METAL</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 24</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/4867c4.webp"
+                            class="card-img-top"
+                            alt="Scorpions June 23"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">SCORPIONS</h5>
+                            <p class="card-text">HARD-ROCK</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 23</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/df2c19.webp"
+                            class="card-img-top"
+                            alt="Gojira June 19"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">GOJIRA</h5>
+                            <p class="card-text">DEATH METAL</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 19</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/183864.webp"
+                            class="card-img-top"
+                            alt="Ghost June 18"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">GHOST</h5>
+                            <p class="card-text">HEAVY POP</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 18</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/0287f2.webp"
+                            class="card-img-top"
+                            alt="Deftones June 17"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">DEFTONES</h5>
+                            <p class="card-text">NEO METAL</p>
+                            <a href="#Lineup" class="btn card-date">JUNE 17</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="lslide" style="width: 260px; margin-right: 10px;">
+                    <div class="card">
+                        <img
+                            src="img/438714.webp"
+                            class="card-img-top"
+                            alt="View the full line up"
+                        />
+                        <div class="card-body">
+                            <a href="#" class="btn card-date">DISCOVER THE FULL LINE UP</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="clone right" style="width: 260px; margin-right: 10px; background-color: transparent;">
+                </li>
+                <li class="clone right" style="width: 260px; margin-right: 10px; background-color: transparent;">
+                </li>
+            </ul>
+        </div>
+    </div>
+		<!---------------->
+		<!-- EXPERIENCE -->
+		<!---------------->
+		<br /><br />
+		<div class="experienceDiv" id="Experience">
+            <div class="experienceDivLeft">
+                <span class="neufilegroteskDarkSmall" style="font-weight: bold;">THE HELLFEST FESTIVAL</span>
+                <span class="microgrammaDarkFilled">UNIQUE EXPERIENCE</span>
+                <img class="separadorDark" src="img/svgexport-5.svg" /><br /><br />
+                <span class="neufilegroteskDarkSmall">
+                    For its 15th edition, the Hellfest is back
+                    with more than 350 groups and artists
+                    from extreme music for 7 days of
+                    festivities over two weekends.
+                </span>
+            </div>			
+			<br />
+            <div class="experienceDivRight">
+                <img src="/img/c91d0f.webp" class="experienceImg">  
+                <br>	
+                <button class="buttonDark">DISCOVER</button>
+            </div>		
+		</div>
+
+		<!------------------------>
+		<!-- SCROLL ANNIVERSARY -->
+		<!------------------------>
+		<br /><br />
+		<div class="scrollDiv2">
+			<span class="scrollText">15TH ANNIVERSARY EDITION</span>
+		</div>
+
+		<!-------------->
+		<!-- CAROUSEL -->
+		<!-------------->
+		<br /><br />
+		<div class="carouselDiv" id="Infos">CAROUSEL WITH INFO (TODO)</div>
+
+		<!------------------->
+		<!-- SCROLL BEYOND -->
+		<!------------------->
+		<br /><br />
+		<div class="scrollDiv3">
+			<span class="scrollText">BEYOND THIS WORLD</span>
+		</div>
+		<!----------------->
+		<!-- FAQ SECTION -->
+		<!----------------->
+		<div class="faqDiv">
+			<div class="faqTextDiv">
+				<span class="solidBlackText">PREPARE YOURSELVES</span>
+				<span class="filledText">FOR HELL</span>
+				<br />
+				<button class="button">FAQ</button>
+			</div>
+			<img class="faqImg mouse" src="img/3e3136.webp" value="5"/>
+		</div>
+
+		<!------------------>
+		<!-- SHOP SECTION -->
+		<!------------------>
+		<div class="shopDiv">
+			<br /><br />
+			<div class="shopInfoDiv">
+				<span class="neufilegroteskDarkSmall">OFFICIAL MERCH</span><br />
+				<span class="microgrammaDarkFilled">SHOP</span><br />
+				<img class="separadorDark" src="img/svgexport-5.svg" style="width: 10vw;"/><br /><br />
+				<span class="neufilegroteskDarkSmall">
+					Discover the 2021 collections, exclusive Hellfest clothing<br />
+					and accessories
+				</span>
+				<br /><br />
+				<button class="buttonDark">VISIT THE SHOP</button><br />
+			</div>			
+			<div class="shopImgDiv">
+				<div class="shopIndividualImgDiv">
+					<span class="microgrammaFilled" style="position: absolute; z-index: 50;">MAN</span>
+					<img class="shopImg" src="../img/47e2f3.webp" alt="Man Clothing" />
+				</div>
+				<div class="shopIndividualImgDiv">
+					<span class="microgrammaFilled">WOMEN</span>
+					<img class="shopImg" src="../img/a3ace0.webp" alt="Women Clothing" />
+				</div>
+			</div>
+		</div>
+
+		<!--------------->
+		<!-- SHORTCUTS -->
+		<!--------------->
+		<br /><br />
+		<div class="shortcutsDiv">
+			<br /><br />
+            <a href="#cashless" class="scaleLinks">
+                <span class="tungstenNoFill">CASHLESS</span>
+            </a>			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+            <a href="#travel" class="scaleLinks">
+                <span class="filledText">TRAVEL</span>
+            </a>
+			<br />
+            <a href="#map" class="scaleLinks">
+                <span class="filledText">MAP</span>
+            </a>			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#app" class="scaleLinks">
+                <span class="tungstenNoFill">MOBILE APP</span>
+            </a>	
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#tickets" class="scaleLinks">
+                <span class="filledText">TICKETS</span>
+            </a>	
+		</div>
+
+		<!------------------->
+		<!-- MERCHANDISING -->
+		<!------------------->
+		<br /><br />
+		<div class="merchDiv">
+			<div class="offMerchDiv">
+				<img
+					src="img/7194b9.webp"
+					class="merchLogosImg"
+					alt="Official Merch Button"
+				/>
+				<img src="img/cac46a.webp" class="merchBackImg" alt="Official Merch" />
+			</div>
+			<div class="offCultFanClubDiv">
+				<img
+					src="img/a81336.webp"
+					class="merchLogosImg"
+					alt="Official Cult Fan Club Button"
+				/>
+				<img
+					src="img/443c9f.webp"
+					class="merchBackImg"
+					alt="Official Cult Fan Club"
+				/>
+			</div>
+		</div>
+
+		<!------------>
+		<!-- POSTER -->
+		<!------------>
+		<div class="posterDiv">
+			<img
+				src="img/b7e0f3.webp"
+				class="posterImg1"
+				alt="Hellfest 15' Edition Anniversaire"
+			/>
+			<img src="img/3ca491.webp" class="posterImg2" alt="Poster" />
+			<div class="socialDiv">
+                <a href="https://www.facebook.com/hellfest/">
+                    <img src="img/svgexport-6.svg" class="socialImg" alt="Facebook Logo" />
+                </a>				
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="https://twitter.com/hellfestopenair">
+                    <img src="img/svgexport-7.svg" class="socialImg" alt="Twitter Logo" />
+                </a>				
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="https://www.youtube.com/channel/UCi7TehIHH5f6DxS8UP6qPhA">
+                    <img src="img/svgexport-8.svg" class="socialImg" alt="Youtube Logo" />
+                </a>				
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="https://www.instagram.com/hellfestopenair">
+                    <img src="img/svgexport-9.svg" class="socialImg" alt="Instagram Logo" />
+                </a>				
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="https://discord.gg/4fYNRz5QSX">
+                    <img src="img/svgexport-10.svg" class="socialImg" alt="Discord Logo" />
+                </a>
+				
+			</div>
+		</div>
+
+		<!------------>
+		<!-- FOOTER -->
+		<!------------>
+		<footer>
+			<br /><br />
+			<div>
+				<img src="img/7b5bfc.webp" class="sponsorImg" alt="Weezevent" />
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<img src="img/f92e58.webp" class="sponsorImg" alt="Arte Concert" />
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<img src="img/258426.webp" class="sponsorImg" alt="Zégut Radio" />
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<img src="img/1b2e8b.webp" class="sponsorImg" alt="Crédit Mutuel" />
+			</div>
+			<br /><br />
+			<hr />
+			<br /><br />
+			<div>
+				<a href="mailto:info@hellfest.fr">Contact</a>
+				<span
+					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+				>
+				<a href="#TAC">Term and conditions</a>
+				<span
+					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+				>
+				<a href="#Partners">Partners</a>
+			</div>
+			<br /><br />
+		</footer>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

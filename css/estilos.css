@@ -1,0 +1,485 @@
+/*********************************************************/
+/* Definicion de fuentes */
+/**************************/
+@font-face {
+	font-family: "Tungsten";
+	src: url("../fonts/Tungsten-Semibold.woff2") format("woff2"),
+		url("../fonts/Tungsten-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Neufile Grotesk";
+	src: url("../fonts/NeufileGrotesk-Bold.woff2") format("woff2"),
+		url("../fonts/NeufileGrotesk-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Neufile Grotesk";
+	src: url("../fonts/NeufileGrotesk-Medium.woff2") format("woff2"),
+		url("../fonts/NeufileGrotesk-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Neufile Grotesk";
+	src: url("../fonts/NeufileGrotesk-Regular.woff2") format("woff2"),
+		url("../fonts/NeufileGrotesk-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Neufile Grotesk";
+	src: url("../fonts/NeufileGrotesk-SemiBold.woff2") format("woff2"),
+		url("../fonts/NeufileGrotesk-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Microgramma D Extended";
+	src: url("../fonts/MicrogrammaD-BoldExte.woff2") format("woff2"),
+		url("../fonts/MicrogrammaD-BoldExte.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+
+/*********************************************************/
+/* GENERAL */
+/***********/
+* {
+	padding: 0px;
+	margin: 0px;
+	color: #d4cebd;
+}
+html {
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+	/*overflow-x: hidden;*/
+}
+body {
+	/* scrollbars: */
+	 overflow-x: hidden;
+	scroll-behavior: smooth initial;
+}
+a {
+	text-decoration: none;
+}
+footer {
+	background-color: #28282a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+/*********************************************************/
+/* CAROUSEL */
+/************/
+.card img{
+	max-width: 50vw;
+	max-height: 50vh;
+    
+}
+.card{
+    height: 60vh;
+	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+	border: none;
+    color: #b09a6d; 
+    background-color: #d4cebd;
+}
+.card-title{
+    font-family: 'Tungsten';
+    font-size: 4vh;
+    color: #b09a6d;
+}
+.card-text{
+    color: #28282a; 
+    font-weight: bold;
+}
+ul{
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+}
+.carousel{
+    
+    margin-bottom: 60px;
+}
+.content-slider{
+    width: 3240px; 
+    transform: translate3d(-540px, 0px, 0px); 
+    padding-bottom: 0%;
+}
+.content-slider li{
+    background-color: #d4cebd;
+    text-align: center;
+    color: #28282a;
+}
+.lslide{
+    height: 100%; 
+    width: 260px; 
+    margin-right: 10px;   
+}
+
+
+/*********************************************************/
+/* DIVs */
+/********/
+.curtainDiv{
+	width: 100vw;
+	height: 90vh;
+	position: absolute;
+	z-index: 50;
+	background: #1d1d1d;
+	font-family:sans-serif;
+	font-size:300px;
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+}
+.navbarDiv {
+	border: 0px;
+	margin: 0px;
+	height: 10vh;
+	min-width: 100vw;
+	flex-direction: row;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: black;
+	color: white;
+	font-family: "Tungsten";
+	font-size: 20px;
+	position: fixed;
+	z-index: 99;
+}
+.videoDiv {
+	width: 100vw;
+	height: 100vh;
+}
+.scrollDiv1 {
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	width: 100vw;
+}
+.lineupDiv {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	background-image: url("../img/pattern-dark.jpg");
+	height: 100vh;
+	width: 100vw;
+}
+.lineupInfoDiv {
+	/*transform: translateY(+0%) translateX(+0%);*/
+    text-align: right;
+}
+.controlesCarouselDiv {
+	position: absolute;
+}
+.experienceDiv {
+    width: 100vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	background-image: url("../img/pattern-light.jpg");
+	height: 100vh;
+}
+.experienceDivLeft{
+    width: 40%;
+}
+.experienceDivRight{
+    width: 50vw;
+}
+.scrollDiv2 {
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	width: 100vw;
+}
+.carouselDiv {
+	height: 100vh;
+	background-image: url("../img/pattern-dark.jpg");
+}
+.scrollDiv3 {
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	width: 100vw;
+}
+.faqDiv {
+	overflow: hidden;
+    height: 75vh;
+}
+.faqTextDiv {
+    z-index: 1;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transform: translateY(+50%) translateX(100%);
+}
+.shopDiv {	
+	padding-right: 1vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	background-image: url("../img/pattern-light.jpg");
+	width: 100vw;
+	height: 85vh;
+}
+.shopInfoDiv{
+	width: 30vw;
+}
+.shopImgDiv {
+	overflow: hidden;
+	width: 60vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.shopIndividualImgDiv{
+	overflow: hidden;
+}
+.shortcutsDiv {
+    width: 100vw;
+    transform: translateX(+25%);
+}
+.scaleLinks:hover {
+    transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+}
+.merchDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.posterDiv {
+	width: 100vw;
+}
+.socialDiv {
+	position: absolute;
+	transform: translateY(-150%) translateX(+75%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*********************************************************/
+/* Imagenes */
+/************/
+.curtainLogo{
+	position: absolute;
+	top: 50%;
+	width: 60vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: invert(100%);
+}
+.hellfestLogoImg {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.letsGoToHellImg {
+	position: absolute;
+	max-height: 14vw;
+	min-height: 8vw;
+	top: 75vh;
+	left: 5vw;
+	background-color: transparent;
+}
+.bandCardImg {
+	height: 10vw;
+}
+.experienceImg {
+    width: 100%;
+}
+.faqImg {
+	width: fit-content;
+}
+.shopImg {
+	padding: 2vw;
+	width: 100%;
+}
+.shopImg:hover{   
+    -webkit-transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+}
+.merchLogosImg {
+	position: absolute;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10vw;
+    z-index: 10;
+}
+.merchLogosImg:hover {
+    -webkit-transition: transform 0.25s ease-in-out;
+	transform: scale(0.9);
+}
+.merchBackImg {
+	width: 50vw;
+}
+.merchBackImg:hover{   
+    -webkit-transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+}
+.posterImg1 {
+	width: 40vw;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(+30%) translateX(70%);
+}
+.posterImg2 {
+	width: 100vw;
+}
+
+.socialImg {
+	height: 4vh;
+}
+.socialImg:hover{
+    -webkit-transition: transform 0.25s ease-in-out;
+    transform: scale(1.25);
+}
+.sponsorImg {
+	width: 15vw;
+}
+
+/*********************************************************/
+/* Fuentes */
+/***********/
+.solidBlackText {
+	font-family: "Tungsten";
+	font-size: 4vw;
+	color: #28282a;
+}
+.tungstenNoFill {
+	color: transparent;
+	-webkit-text-fill-color: black;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: white;
+	font-family: "Tungsten";
+	font-size: 5vw;
+}
+.filledText {
+	font-family: "Microgramma D Extended";
+	font-size: 5vw;
+}
+.tungstenFilled {
+	font-family: "Tungsten";
+	font-size: 4vw;
+}
+.microgrammaNoFill {
+	color: transparent;
+	-webkit-text-fill-color: black;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #d4cebd;
+	font-family: "Microgramma D Extended";
+	font-size: 5vw;
+}
+.microgrammaDarkFilled {
+	color: #28282a;
+	font-family: "Microgramma D Extended";
+	font-size: 5vw;
+}
+.microgrammaFilled {
+	color: #d4cebd;
+	font-family: "Microgramma D Extended";
+	font-size: 5vw;
+}
+.neufilegroteskSmall {
+	font-family: "Neufile Grotesk";
+	font-size: 2vw;
+	color: #d4cebd;
+}
+.neufilegroteskDarkSmall {
+	font-family: "Neufile Grotesk";
+	font-size: 2vw;
+	color: #28282a;
+}
+
+/*********************************************************/
+/* Elementos */
+/*************/
+.mjeSeeYouInHell {
+	font-family: "Microgramma D Extended";
+	font-size: 7vw;
+    text-align: right;
+	line-height: 7vw;
+	background-color: transparent;
+	justify-items: right;
+	position: absolute;
+	top: 30%;
+	right: 1.5vw;
+}
+.videoPlayback {
+	position: center center;
+	height: 80vh;
+}
+.scrollText {
+	color: transparent;
+	-webkit-text-fill-color: black;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #d4cebd;
+	font-family: "Tungsten";
+	font-size: 16vw;
+}
+.button{
+	z-index: 1;
+    color: #28282a;
+    font-weight: bold;
+    width: 22vw;
+    height: 7vh;
+	border-width: 0px;
+	background-color: transparent;
+    background-image: url("../img/svgexport-13.svg");
+}
+.button:hover:{
+    -webkit-transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+	
+}
+.buttonDark{
+    color: #d4cebd;
+    font-weight: bold;
+    width: 22vw;
+    height: 7vh;
+	border-width: 0px;
+	background-color: transparent;
+    background-image: url("../img/svgexport-16.png");
+}
+.buttonDark:hover:{
+    -webkit-transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+}
