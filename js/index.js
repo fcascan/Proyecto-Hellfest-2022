@@ -1,5 +1,5 @@
-// import { disablePageScroll, enablePageScroll } from "/js/scroll-lock.js";
-// import lightSlider from "./js/lightslider.js";
+// import { disablePageScroll, enablePageScroll } from "scroll-lock.js";
+// import lightSlider from "lightslider.js";
 
 $(document).ready(() => {
 	//Funcion que realiza el efecto parralax en los scrollDiv:
