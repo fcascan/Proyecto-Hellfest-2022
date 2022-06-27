@@ -1,21 +1,23 @@
-import { disablePageScroll, enablePageScroll } from "/js/scroll-lock.js"
+import { disablePageScroll, enablePageScroll } from "/js/scroll-lock.js";
+//import lightSlider from "/js/lightslider.js";
 
-$(document).ready(function () {
+$(document).ready(() => {
 	//Funcion que realiza el efecto parralax en los scrollDiv:
 	$(window).scroll(function () {
 		var wScroll = $(this).scrollTop();
 		$(".scrollDiv1").css({
-			transform: "translateX(" + -(wScroll / 7 - 70) + "vw)",
+			transform: "translateX(" + -(wScroll / 6 - 70) + "vw)",
 		});
 		$(".scrollDiv2").css({
-			transform: "translateX(" + -(wScroll / 7 - 370) + "vw)",
+			transform: "translateX(" + -(wScroll / 6 - 400) + "vw)",
 		});
 		$(".scrollDiv3").css({
-			transform: "translateX(" + -(wScroll / 7 - 530) + "vw)",
+			transform: "translateX(" + -(wScroll / 6 - 600) + "vw)",
 		});
 	});
 
 	//Funciones que configuran al lightslider (Carousel):
+	$("#lightSlider").lightSlider(); 
 	$("#content-slider").lightSlider({
 		loop: false,
 		keyPress: true,
@@ -27,6 +29,18 @@ $(document).ready(function () {
 			$("#autoWidth").removeClass("cS-hidden");
 		},
 	});
+	//Funciones que realizan el avance y retroceso de Slides del carousel:
+	var slider = $("#publicMethods").lightSlider({
+		slideMargin: 4,
+		slideWidth: 200,
+		loop: false,
+	});
+	$("#goToPrevSlide").click(function () {
+		slider.goToPrevSlide();
+	});
+	$("#goToNextSlide").click(function () {
+		slider.goToNextSlide();
+	});
 
 	//Funcion que realiza el efecto de telón que sube al cargar la pagina:
 	function moveCurtain() {
@@ -36,7 +50,7 @@ $(document).ready(function () {
 		function frame() {
 			if (pos == 100) {
 				enablePageScroll($scrollableElement);
-				element.style.display = "none";	
+				element.style.display = "none";
 				clearInterval(tInterval);
 			} else {
 				// disablePageScroll($scrollableElement);
@@ -45,7 +59,7 @@ $(document).ready(function () {
 			}
 		}
 	}
-	var $scrollableElement = document.querySelector('body');
+	var $scrollableElement = document.querySelector("body");
 	moveCurtain();
 });
 

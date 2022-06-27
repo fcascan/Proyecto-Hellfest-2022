@@ -62,15 +62,22 @@
 	color: #d4cebd;
 }
 html {
+	overflow-x: hidden;
 	padding: 0px;
 	margin: 0px;
 	background-color: black;
 	/*overflow-x: hidden;*/
 }
 body {
-	/* scrollbars: */
-	 overflow-x: hidden;
+	position: relative;
+	overflow-x: hidden;
 	scroll-behavior: smooth initial;
+	width: 100vw;
+}
+div {
+	border-color: magenta;
+	border-style: solid;
+	border-width: 1px;
 }
 a {
 	text-decoration: none;
@@ -85,47 +92,65 @@ footer {
 
 
 /*********************************************************/
-/* CAROUSEL */
-/************/
-.card img{
-	max-width: 50vw;
-	max-height: 50vh;
-    
-}
-.card{
-    height: 60vh;
+/* CAROUSEL Y CARDS */
+/********************/
+
+.card {
+	height: 55vh; 
+	overflow: hidden;
 	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
 	border: none;
     color: #b09a6d; 
     background-color: #d4cebd;
 }
-.card-title{
+.cardImg {
+	position: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	max-width: 50vw;
+	max-height: 50vh;
+}
+.cardImg:hover {   
+    -webkit-transition: transform 0.25s ease-in-out;
+    transform: scale(1.1);
+}
+.cardBody {
+	overflow: hidden;
+	z-index: 99;
+	padding: 5%;
+}
+.cardTitle {
     font-family: 'Tungsten';
-    font-size: 4vh;
+    font-size: 5vh;
     color: #b09a6d;
 }
-.card-text{
-    color: #28282a; 
-    font-weight: bold;
+.cardButton{
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: #b09a6d;
+	background-color: #b09a6d;
+	height: 4vh;
+	width: 40%;
+	font-weight: bold;
 }
-ul{
+ul {
+	height: 100%; 
     list-style: none outside none;
     padding-left: 0;
     margin: 0;
 }
-.carousel{
-    
-    margin-bottom: 60px;
+/*.lSSlideOuter{
+	height: 100%; 
 }
+.lSSlideWrapper{
+	height: 100%; 
+}*/
 .content-slider{
+	height: 100% !important;
     width: 3240px; 
     transform: translate3d(-540px, 0px, 0px); 
     padding-bottom: 0%;
-}
-.content-slider li{
-    background-color: #d4cebd;
-    text-align: center;
-    color: #28282a;
 }
 .lslide{
     height: 100%; 
@@ -152,13 +177,15 @@ ul{
 	box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
 }
 .navbarDiv {
-	border: 0px;
-	margin: 0px;
-	height: 10vh;
+	padding: 0 0 0 3vw;	/* padding: top right bottom left */
+	border: 0;
+	height: 18vh;
+	max-height: 12vh;
 	min-width: 100vw;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	background-color: black;
 	color: white;
@@ -168,6 +195,7 @@ ul{
 	z-index: 99;
 }
 .videoDiv {
+	overflow: hidden;
 	width: 100vw;
 	height: 100vh;
 }
@@ -180,22 +208,32 @@ ul{
 	width: 100vw;
 }
 .lineupDiv {
+	padding-left: 2vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-evenly;
+	justify-content: left;
 	align-items: center;
 	background-image: url("../img/pattern-dark.jpg");
-	height: 100vh;
 	width: 100vw;
+	height: 100vh;
 }
 .lineupInfoDiv {
-	/*transform: translateY(+0%) translateX(+0%);*/
+	padding: 0 1.5vw 0 1.5vw;
     text-align: right;
+	min-width: 40vw;
 }
-.controlesCarouselDiv {
-	position: absolute;
+.carouselArrowsDiv {
+	padding: 0 1.5vw 0 1.5vw;
+	transform: translateY(+160%);
 }
+.carouselDiv{
+	display: flex;
+	align-items: center;
+    width: 100%;
+	height: 50vh;
+}
+
 .experienceDiv {
     width: 100vw;
     display: flex;
@@ -220,7 +258,7 @@ ul{
 	white-space: nowrap;
 	width: 100vw;
 }
-.carouselDiv {
+.infosDiv {
 	height: 100vh;
 	background-image: url("../img/pattern-dark.jpg");
 }
@@ -269,12 +307,17 @@ ul{
 	overflow: hidden;
 }
 .shortcutsDiv {
-    width: 100vw;
-    transform: translateX(+25%);
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 .scaleLinks:hover {
     transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
+	transform: scale(1.1);
+	color: #b09a6d;
 }
 .merchDiv {
 	display: flex;
@@ -285,8 +328,14 @@ ul{
 	width: 100vw;
 }
 .socialDiv {
+	height: 5vh;
 	position: absolute;
-	transform: translateY(-150%) translateX(+75%);
+	transform: translateY(-150%) translateX(+65%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sponsorsDiv{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -366,7 +415,7 @@ ul{
 }
 
 .socialImg {
-	height: 4vh;
+	height: 100%;
 }
 .socialImg:hover{
     -webkit-transition: transform 0.25s ease-in-out;
@@ -424,6 +473,7 @@ ul{
 	color: #d4cebd;
 }
 .neufilegroteskDarkSmall {
+	font-weight: bold;
 	font-family: "Neufile Grotesk";
 	font-size: 2vw;
 	color: #28282a;
@@ -439,9 +489,9 @@ ul{
 	line-height: 7vw;
 	background-color: transparent;
 	justify-items: right;
-	position: absolute;
-	top: 30%;
-	right: 1.5vw;
+	position: relative;
+	bottom: 60%;
+	left: 67%;
 }
 .videoPlayback {
 	position: center center;

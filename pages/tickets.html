@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lineup - HellFest 2022</title>
+		<link rel="stylesheet" href="../css/estilos.css" />
+	</head>
+	<body>
+		<!------------>
+		<!-- NAVBAR -->
+		<!------------>
+		<div class="navbarDiv">
+			<a href="../index.html">
+				<img
+					class="hellfestLogoImg"
+					src="../img/svgexport-2.svg"
+					alt="logo"
+					style="width: 100px; height: 100px"
+					href="../index.html#home"
+				/>
+			</a>
+			<div></div>
+			<div></div>
+			<div></div>
+			<a href="lineup.html">LINE UP</a>
+			<a href="../index.html#Experience">EXPERIENCE</a>
+			<a href="../index.html#Infos">INFOS</a>
+			<img src="../img/svgexport-3.svg" href="#" />
+			<div></div>
+		</div>
+		
+
+        <!------------>
+		<!-- INFO- --->
+		<!------------>
+        <br /><br /><br /><br /><br />
+        <div class="videoDiv" id="Home">
+			<img src="../img/billets-1400x933.jpg" alt="Billeterie">    
+			<br />
+			<span class="mjeSeeYouInHell">TICKETS</span>
+		</div>
+
+        <br><br>
+        <div>
+            Please, submit your request with the following form, and a member of the sales team will contact you as soon as possible.
+        </div>
+        
+
+        <!------------>
+		<!-- FORM- --->
+		<!------------>
+        <br><br>
+		<div
+			style="
+            padding: 2vw;
+				width: 100vw;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			"
+		>
+            <form action="">
+                <fieldset>
+                    <legend >Hellfest Part 1 : 17-19 Juin 2022</legend>
+                    Name: <input type=”text” name="name" required><br>
+                    First Name: <input type=”text” name="fname" required><br>
+                    E-mail: <input type=”text” required><br>
+                    Payment Choice:
+                    <select name="payment" id="paymentSelect">
+                        <option value="creditCard">Credit Card</option>
+                        <option value="cash">Cash on the Billeterie</option>
+                    </select><br>
+                    Quantity of Passes: <input type=”number” min="1" max="10" required><br>
+                    Type of Pass: <input type=”text” required><br><br>
+                    <input type="submit" value="Submit">
+
+                </fieldset>
+            </form>
+		</div>
+	</body>
+</html>
