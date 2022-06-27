@@ -74,11 +74,11 @@ body {
 	scroll-behavior: smooth initial;
 	width: 100vw;
 }
-div {
+/*div {
 	border-color: magenta;
 	border-style: solid;
 	border-width: 1px;
-}
+}*/
 a {
 	text-decoration: none;
 }
