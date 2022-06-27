@@ -112,7 +112,7 @@ footer {
 	max-height: 50vh;
 }
 .cardImg:hover {   
-    -webkit-transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
     transform: scale(1.1);
 }
 .cardBody {
@@ -380,7 +380,7 @@ ul {
 	width: 100%;
 }
 .shopImg:hover{   
-    -webkit-transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
     transform: scale(1.1);
 }
 .merchLogosImg {
@@ -392,14 +392,14 @@ ul {
     z-index: 10;
 }
 .merchLogosImg:hover {
-    -webkit-transition: transform 0.25s ease-in-out;
+    -transition: transform 0.25s ease-in-out;
 	transform: scale(0.9);
 }
 .merchBackImg {
 	width: 50vw;
 }
 .merchBackImg:hover{   
-    -webkit-transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
     transform: scale(1.1);
 }
 .posterImg1 {
@@ -418,7 +418,7 @@ ul {
 	height: 100%;
 }
 .socialImg:hover{
-    -webkit-transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
     transform: scale(1.25);
 }
 .sponsorImg {
@@ -515,8 +515,8 @@ ul {
 	background-color: transparent;
     background-image: url("../img/svgexport-13.svg");
 }
-.button:hover:{
-    -webkit-transition: transform 0.25s ease-in-out;
+.button:hover{
+    transition: transform 0.25s ease-in-out;
     transform: scale(1.1);
 	
 }
@@ -529,7 +529,7 @@ ul {
 	background-color: transparent;
     background-image: url("../img/svgexport-16.png");
 }
-.buttonDark:hover:{
-    -webkit-transition: transform 0.25s ease-in-out;
+.buttonDark:hover{
+    transition: transform 0.25s ease-in-out;
     transform: scale(1.1);
 }
