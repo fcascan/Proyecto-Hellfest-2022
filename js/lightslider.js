@@ -1,41 +1,59 @@
 (function ($, undefined) {
     'use strict';
     var defaults = {
-        item: 3,
-        autoWidth: false,
-        slideMove: 1,
-        slideMargin: 10,
-        addClass: '',
-        mode: 'slide',
-        useCSS: true,
-        cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',
-        easing: 'linear', //'for jquery animation',//
-        speed: 400, //ms'
-        auto: false,
-        pauseOnHover: false,
-        loop: false,
-        slideEndAnimation: true,
-        pause: 2000,
-        keyPress: false,
-        controls: true,
-        prevHtml: '',
-        nextHtml: '',
-        rtl: false,
-        adaptiveHeight: true,
-        vertical: false,
-        verticalHeight: 500,
-        vThumbWidth: 100,
-        thumbItem: 10,
-        pager: false,
-        gallery: false,
-        galleryMargin: 5,
-        thumbMargin: 5,
-        currentPagerPosition: 'middle',
-        enableTouch: true,
-        enableDrag: true,
-        freeMove: true,
-        swipeThreshold: 40,
-        responsive: [],
+        item: 5,    //number of slides to show at a time
+        autoWidth: true,   //Custom width for each slide
+        slideMove: 1,   //Number of slides to be moved at a time
+        slideMargin: 10,    //Spacing between each slide
+        addClass: '',   //Add custom class for slider, can be used to set different style for different sliders
+        mode: 'slide',  //Type of transition 'slide' and 'fade'
+        useCSS: true,   //If true LightSlider will use CSS transitions. if falls jquery animation will be used.
+        cssEasing: 'ease', //ease='cubic-bezier(0.25, 0, 0.25, 1)', Type of easing to be used for css animations
+        easing: 'linear', //'for jquery animation',//Type of easing to be used for jquery animations
+        speed: 400,     //Transition duration (in ms). // ex = speed:400;
+        auto: false,    //If true, the Slider will automatically start to play.
+        pauseOnHover: false,    //Pause autoplay on hover.
+        loop: false,    //If false, will disable the ability to loop back to the beginning of the slide when on the last element.
+        slideEndAnimation: true,    //Enable slideEnd animation
+        pause: 2000,    //The time (in ms) between each auto transition
+        keyPress: false,    //Enable keyboard navigation
+        controls: false,    //If false, prev/next buttons will not be displayed.
+        prevHtml: '',   //custom html for prev control
+        nextHtml: '',   //custom html for next control
+        rtl: false,     //Change direction to right-to-left
+        adaptiveHeight: false,  //Dynamically adjust slider height based on each slide's height
+        vertical: false,    //change slide's direction from horizontal to Vertical
+        verticalHeight: 500,    //set height of slider if vertical mode is active and item more than 1
+        vThumbWidth: 100,   //width of gallery thumbnail while vertical mode active
+        thumbItem: 10,  //number of gallery thumbnail to show at a time
+        pager: false,   //Enable pager option
+        gallery: false,     //Enable thumbnails gallery
+        galleryMargin: 5,   //Spacing between gallery and slide
+        thumbMargin: 5,     //Spacing between each thumbnails
+        currentPagerPosition: 'middle', //position of thumbnails . 'left', 'middle', 'right'
+        enableTouch: true,  //Enables touch support
+        enableDrag: true,   //Enables desktop mouse drag support
+        freeMove: true, //Enable free move(no limit) while swipe or drag
+        swipeThreshold: 40,     //Threshold to start swipe
+        responsive: [{
+			breakpoint:992,
+        	settings: {
+				item:3,
+          		slideMove:1
+        	}} , {
+			breakpoint:768,
+			settings: {
+				item:2,
+				slideMove:1,
+				slideMargin:6,
+			}} , {
+			breakpoint:480,
+			settings: {
+				item:1,
+				slideMove:1
+			}}
+        ],     //Separate settings per breakpoint.
+        /* Callbacks */
         /* jshint ignore:start */
         onBeforeStart: function ($el) {},
         onSliderLoad: function ($el) {},

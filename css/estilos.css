@@ -51,7 +51,73 @@
 }
 
 
-
+/*********************************************************/
+/* CORRECCIONES RESPONSIVE */
+/***************************/
+@media only screen and (max-width: 800px) {
+	.mjeSeeYouInHell {
+		font-size: 55px !important;
+		line-height: 50px !important;
+		left: 30vw !important;
+	}
+	.lineupDiv {
+		flex-wrap: wrap !important;
+	}
+	.card {
+		height: 35vh; 
+		/* width: 35vw; */
+	}
+	.experienceDiv {
+		flex-wrap: wrap !important;
+	}
+	.shopDiv {
+		flex-wrap: wrap !important;
+	}
+	.lineupInfoDiv {
+		min-width: 40vw !important;
+		/* width: 10vw; */
+	}
+	.sponsorsDiv {
+		min-width: 100vw;
+		min-height: 50px;
+	}
+	
+	.button {
+		width: 116px !important;
+		height: 32px !important;
+	}
+	.buttonDark {
+		width: 116px !important;
+		height: 32px !important;
+	}
+	.solidBlackText {
+		font-size: 37px !important;
+	}
+	.tungstenNoFill {
+		font-size: 30px !important;
+	}
+	.filledText {
+		font-size: 37px !important;
+	}
+	.tungstenFilled {
+		font-size: 30px !important;
+	}
+	.microgrammaNoFill {
+		font-size: 45px !important;
+	}
+	.microgrammaDarkFilled {
+		font-size: 37px !important;
+	}
+	.microgrammaFilled {
+		font-size: 37px !important;
+	}
+	.neufilegroteskSmall {
+		font-size: 15px !important;
+	}
+	.neufilegroteskDarkSmall {
+		font-size: 18px !important;
+	}
+}
 
 /*********************************************************/
 /* GENERAL */
@@ -61,24 +127,27 @@
 	margin: 0px;
 	color: #d4cebd;
 }
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 html {
+	overflow: scroll;
 	overflow-x: hidden;
 	padding: 0px;
 	margin: 0px;
 	background-color: black;
-	/*overflow-x: hidden;*/
 }
 body {
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 	scroll-behavior: smooth initial;
 	width: 100vw;
 }
-/*div {
-	border-color: magenta;
-	border-style: solid;
-	border-width: 1px;
-}*/
+input, select, option {
+	background-color: #d4cebd;
+	color: black;
+}
 a {
 	text-decoration: none;
 }
@@ -90,72 +159,204 @@ footer {
 	flex-direction: column;
 }
 
+/* For debbuging purposes only. Comment when done: TODO */
+div {
+	border-color: magenta;
+	border-style: solid;
+	border-width: 1px;
+}
+section {
+	border-color: cyan;
+	border-style: solid;
+	border-width: 1px;
+}
+
+/*********************************************************/
+/* NAVBAR HAMBURGUER */
+/*********************/
+/* Fuente: https://alvarotrigo.com/blog/hamburger-menu-css/ */
+.hamburguer {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	margin-top: 11.9vh;
+	left: 0;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.hamburguer > .hamLi {
+	margin: 0 1rem;
+	overflow: hidden;
+}
+.hamburguer-button-container {
+	display: flex;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#hamburguer-toggle {
+	display: none;
+}
+.hamburguer-button-container:hover {
+	transition: transform 0.30s ease-in-out;
+	transform: scale(1.1);
+}
+.hamburguer-button,
+.hamburguer-button::before,
+.hamburguer-button::after {
+  display: block;
+  /* background-color: #d4cebd; */
+  /* background-image: url("../img/svgexport-3.svg"); */
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+.hamburguer-button::before {
+  content: '';
+  margin-top: -8px;
+}
+.hamburguer-button::after {
+  content: '';
+  margin-top: 8px;
+}
+#hamburguer-toggle:checked + .hamburguer-button-container .hamburguer-button::before {
+  margin-top: 0px;
+  /* display: none; */
+  /* transform: rotate(-405deg); */
+  /* background-image: url("../img/svgexport-4.svg"); */
+}
+#hamburguer-toggle:checked + .hamburguer-button-container .hamburguer-button {
+  background: rgba(255, 255, 255, 0);
+}
+#hamburguer-toggle:checked + .hamburguer-button-container .hamburguer-button::after {
+  margin-top: 0px;
+  /* transform: rotate(-405deg); */
+  /* display: none; */
+}
+#hamburguer-toggle:checked ~ .hamburguer .hamLi {
+	height: 15vh;
+	border: 0;
+	padding-left: 20vw;
+	transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* .hamburguer > .hamLi:not(:last-child) {
+	border-bottom: 1px solid #444;
+} */
+.hamburguer > .hamLi {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	/* padding-left: 15px; */
+	padding-left: 20vw;
+	/* padding: 0.5em 0; */
+	width: 100%;
+	background-color: black;
+	background-image: url("../img/pattern-dark.jpg");
+}
+.hamburguer {
+	position: absolute;
+	top: 0;
+	margin-top: 12vh;
+	left: 0;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+#hamburguer-toggle ~ .hamburguer .hamLi {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	padding-left: 20vw;
+	border: 0;
+	transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 
 /*********************************************************/
 /* CAROUSEL Y CARDS */
 /********************/
+.lSSlideOuter{
+	/* height: 100% !important;  */
+}
+.lSSlideWrapper{
+	height: 100% !important; 
+}
+.content-slider{
+	/* height: 100% !important; */
+	max-height: 326px !important;
+    /* transform: translate3d(-540px, 0px, 0px);  */
+    padding-bottom: 0%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap !important;
+	align-items: center;
+}
+/* ul {
+	height: 100% !important; 
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+} */
+.lslide{
+    /* height: 100% !important;  */
+    /* width: 260px;  */
+    margin-right: 10px;   
 
+}
 .card {
-	height: 55vh; 
+	height: 90%; 	
+	max-height: 100%;
+	
+	align-items: center;
 	overflow: hidden;
-	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-	border: none;
+	border: 2px;
     color: #b09a6d; 
+    border-color: #b09a6d; 
     background-color: #d4cebd;
 }
-.cardImg {
-	position: flex;
-	flex-direction: row;
+.cardImgDiv{
+	display: flex;
 	justify-content: center;
-	align-items: center;
-	max-width: 50vw;
-	max-height: 50vh;
 }
-.cardImg:hover {   
-    transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
+.cardImg {
+	/* display:block;
+    margin:auto; */
+	width: 110%;
+	/* max-height: 610%; */
+	vertical-align: middle;
 }
 .cardBody {
+	/* es un <div> */
 	overflow: hidden;
-	z-index: 99;
 	padding: 5%;
 }
 .cardTitle {
+	/* es un <h5> */
     font-family: 'Tungsten';
-    font-size: 5vh;
+    font-size: 40px;
     color: #b09a6d;
 }
 .cardButton{
+	padding: 2%;
+	z-index: 10;
 	border-width: 1px;
 	border-radius: 3px;
 	border-color: #b09a6d;
 	background-color: #b09a6d;
-	height: 4vh;
-	width: 40%;
+	min-height: 4vh;
 	font-weight: bold;
-}
-ul {
-	height: 100%; 
-    list-style: none outside none;
-    padding-left: 0;
-    margin: 0;
-}
-/*.lSSlideOuter{
-	height: 100%; 
-}
-.lSSlideWrapper{
-	height: 100%; 
-}*/
-.content-slider{
-	height: 100% !important;
-    width: 3240px; 
-    transform: translate3d(-540px, 0px, 0px); 
-    padding-bottom: 0%;
-}
-.lslide{
-    height: 100%; 
-    width: 260px; 
-    margin-right: 10px;   
 }
 
 
@@ -194,6 +395,9 @@ ul {
 	position: fixed;
 	z-index: 99;
 }
+.hamIcon {
+	z-index: 100;
+}
 .videoDiv {
 	overflow: hidden;
 	width: 100vw;
@@ -212,11 +416,11 @@ ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: left;
+	justify-content: flex-start;
 	align-items: center;
 	background-image: url("../img/pattern-dark.jpg");
 	width: 100vw;
-	height: 100vh;
+	min-height: 85vh;
 }
 .lineupInfoDiv {
 	padding: 0 1.5vw 0 1.5vw;
@@ -224,31 +428,37 @@ ul {
 	min-width: 40vw;
 }
 .carouselArrowsDiv {
+	height: 1vh;
 	padding: 0 1.5vw 0 1.5vw;
-	transform: translateY(+160%);
+	transform: translateY(+110%);
 }
 .carouselDiv{
+	padding: 10vw 0 10vw 0;
 	display: flex;
 	align-items: center;
     width: 100%;
 	height: 50vh;
 }
-
 .experienceDiv {
+	padding: 1vw;
+	min-height: 85vh;
     width: 100vw;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	background-image: url("../img/pattern-light.jpg");
-	height: 100vh;
 }
 .experienceDivLeft{
-    width: 40%;
+	position: relative;
+	z-index: 10;
+    min-width: 40vw;
 }
 .experienceDivRight{
-    width: 50vw;
+	position: relative;
+	overflow: hidden;
+    min-width: 50vw;
 }
 .scrollDiv2 {
 	background-attachment: fixed;
@@ -275,36 +485,54 @@ ul {
     height: 75vh;
 }
 .faqTextDiv {
+	width: 100%;
     z-index: 1;
 	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	transform: translateY(+50%) translateX(100%);
+	transform: translateY(+50%);
 }
 .shopDiv {	
 	padding-right: 1vw;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	align-items: center;
 	background-image: url("../img/pattern-light.jpg");
 	width: 100vw;
-	height: 85vh;
+	min-height: 85vh;
 }
 .shopInfoDiv{
-	width: 30vw;
+	min-width: 40vw;
 }
-.shopImgDiv {
-	overflow: hidden;
-	width: 60vw;
+.shopRightDiv {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	min-width: 55vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.shopIndividualImgDiv{
+.shopCardDiv{
+	padding: 1%;
 	overflow: hidden;
+	width: 100%;
+}
+.shopCardTitleDiv {
+	width: 100%;
+    z-index: 10;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(+500%);
+	font-size: 3vw !important;
 }
 .shortcutsDiv {
 	width: 100vw;
@@ -314,35 +542,52 @@ ul {
 	justify-content: center;
 	align-items: center;
 }
-.scaleLinks:hover {
-    transition: transform 0.25s ease-in-out;
-	transform: scale(1.1);
-	color: #b09a6d;
-}
 .merchDiv {
+	overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+.merchLogosDiv{
+	position: absolute;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50vw;
+    z-index: 10;
+	transform: translateY(+150%);
+}
 .posterDiv {
+	/* min-height: 85vh; */
 	width: 100vw;
 }
 .socialDiv {
+	width: 100vw;
 	height: 5vh;
 	position: absolute;
-	transform: translateY(-150%) translateX(+65%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 1;
+	transform: translateY(-150%);
 }
+
+/*********************************************************/
+/* FOOTER */
+/************/
 .sponsorsDiv{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
+.saludoFooter{
+	font-size: 12px; 
+	text-align: center
+}
+
 /*********************************************************/
-/* Imagenes */
+/* IMAGENES */
 /************/
 .curtainLogo{
 	position: absolute;
@@ -366,41 +611,25 @@ ul {
 	left: 5vw;
 	background-color: transparent;
 }
-.bandCardImg {
-	height: 10vw;
+.separador{
+	width: 100%;
 }
 .experienceImg {
     width: 100%;
 }
 .faqImg {
-	width: fit-content;
+	position: relative;
+	height: 175%;
 }
 .shopImg {
-	padding: 2vw;
 	width: 100%;
 }
-.shopImg:hover{   
-    transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
-}
 .merchLogosImg {
-	position: absolute;	
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 10vw;
     z-index: 10;
 }
-.merchLogosImg:hover {
-    -transition: transform 0.25s ease-in-out;
-	transform: scale(0.9);
-}
 .merchBackImg {
 	width: 50vw;
-}
-.merchBackImg:hover{   
-    transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
 }
 .posterImg1 {
 	width: 40vw;
@@ -413,89 +642,174 @@ ul {
 .posterImg2 {
 	width: 100vw;
 }
-
 .socialImg {
 	height: 100%;
 }
-.socialImg:hover{
-    transition: transform 0.25s ease-in-out;
-    transform: scale(1.25);
-}
 .sponsorImg {
 	width: 15vw;
+}
+.separadorDark{
+	width: 100%;
 }
 
 /*********************************************************/
 /* Fuentes */
 /***********/
+/*TODO*/
 .solidBlackText {
 	font-family: "Tungsten";
-	font-size: 4vw;
+	font-size: 50px;
 	color: #28282a;
 }
 .tungstenNoFill {
-	color: transparent;
-	-webkit-text-fill-color: black;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent !important;
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: white;
 	font-family: "Tungsten";
-	font-size: 5vw;
+	/* font-size: 5vw; */
+	font-size: 40px;
 }
 .filledText {
 	font-family: "Microgramma D Extended";
-	font-size: 5vw;
+	font-size: 50px;
 }
 .tungstenFilled {
 	font-family: "Tungsten";
-	font-size: 4vw;
+	font-size: 40px;
 }
 .microgrammaNoFill {
-	color: transparent;
-	-webkit-text-fill-color: black;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent !important;
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: #d4cebd;
 	font-family: "Microgramma D Extended";
-	font-size: 5vw;
+	font-size: 60px;
 }
 .microgrammaDarkFilled {
 	color: #28282a;
 	font-family: "Microgramma D Extended";
-	font-size: 5vw;
+	font-size: 50px;
 }
 .microgrammaFilled {
 	color: #d4cebd;
 	font-family: "Microgramma D Extended";
-	font-size: 5vw;
+	font-size: 30px;
 }
 .neufilegroteskSmall {
 	font-family: "Neufile Grotesk";
-	font-size: 2vw;
+	font-size: 20px;
 	color: #d4cebd;
 }
 .neufilegroteskDarkSmall {
-	font-weight: bold;
 	font-family: "Neufile Grotesk";
-	font-size: 2vw;
+	font-size: 18px;
 	color: #28282a;
 }
 
 /*********************************************************/
-/* Elementos */
-/*************/
+/* EFECTOS FX */
+/**************/
+a:hover {
+	-webkit-text-stroke-color: #b09a6d;
+	color: #563a46;
+}
+.hellfestLogoImg:hover {
+	z-index: 100;
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+}
+.hamIcon:hover {
+	z-index: 100;
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.25);
+}
+.letsGoToHellImg:hover {
+	z-index: 100;
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+}
+.card:hover {   
+	z-index: 100;
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+}
+.scaleLinks:hover {
+    transition: transform 0.30s ease-in-out;
+	transform: scale(1.1);
+	color: #b09a6d;
+}
+.shopImg:hover{
+	transition: transform 0.30s ease-in-out;
+	transform: scale(1.1);
+}
+.merchLogosImg:hover {
+    transition: transform 0.30s ease-in-out;
+	transform: scale(0.9);
+}
+.offMerchDiv:hover > #merchBackImg {   
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+}
+.offMerchDiv:hover > #merchLogosImg {
+	transition: transform 0.30s ease-in-out;
+	transform: scale(0.50);
+}
+.offCultFanClubDiv:hover {   
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+}
+.offCultFanClubDiv:hover > #merchLogosImg {
+	transition: transform 0.30s ease-in-out;
+	transform: scale(0.75);
+}
+.socialImg:hover {
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.25);
+}
+.button:hover {
+	z-index: 100;
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+	border-width: 0px;
+	background-color: transparent;
+    background-image: url("../img/svgexport-14.png");
+}
+.buttonDark:hover {
+	z-index: 100;
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+	background-color: transparent;
+    background-image: url("../img/svgexport-19.png");
+}
+.cardButton:hover{
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+	color: #d4cebd;
+	background-color: #563a46;
+}
+.carouselArrows:hover {
+    transition: transform 0.30s ease-in-out;
+    transform: scale(1.1);
+}
+
+/*********************************************************/
+/* INDEX */
+/*********/
 .mjeSeeYouInHell {
 	font-family: "Microgramma D Extended";
-	font-size: 7vw;
+	font-size: 85px;
     text-align: right;
-	line-height: 7vw;
+	line-height: 80px;
 	background-color: transparent;
 	justify-items: right;
-	position: relative;
-	bottom: 60%;
-	left: 67%;
+	position: absolute;
+	top: 3%;
+	right: 6%;
 }
 .videoPlayback {
 	position: center center;
-	height: 80vh;
+	height: 90vh;
 }
 .scrollText {
 	color: transparent;
@@ -506,30 +820,208 @@ ul {
 	font-size: 16vw;
 }
 .button{
+	/* padding: 1vh 3vw 1vh 3vw; */
+	position: relative;
 	z-index: 1;
     color: #28282a;
     font-weight: bold;
-    width: 22vw;
-    height: 7vh;
+	width: 232px;
+	height: 65px;
 	border-width: 0px;
 	background-color: transparent;
     background-image: url("../img/svgexport-13.svg");
 }
-.button:hover{
-    transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
-	
-}
 .buttonDark{
+	position: relative;
     color: #d4cebd;
     font-weight: bold;
-    width: 22vw;
-    height: 7vh;
+	width: 232px;
+	height: 65px;
 	border-width: 0px;
 	background-color: transparent;
     background-image: url("../img/svgexport-16.png");
 }
-.buttonDark:hover{
-    transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
+
+/*********************************************************/
+/* SECCION TITULO EN PARTNERS, TOCS, MAPS,  */
+/********************************************/
+.titleSection{
+	height: 70vh;
+	overflow: hidden;
+	position: relative;
 }
+.tituloDiv {
+	top: 50vh;
+	position: absolute;
+	z-index: 10;
+}
+
+/*********************************************************/
+/* PARTNERS PAGE */
+/*****************/
+.partnersSection{
+	background-image: url(../img/pattern-dark-secondary.jpg);
+}
+.partnersList{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.partnersItemDiv{
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+}
+.partnersListItem{
+	width: 185px;
+	height: 145px;
+}
+.partnersImg{
+	width: 100%;
+}
+
+/*********************************************************/
+/* TOCS PAGE */
+/*************/ 
+.tocsSection{
+	background-image: url(../img/pattern-dark-secondary.jpg);
+	padding: 2vw;
+}
+.tocSpan, .ticketsSpan {
+	font-family: "Neufile Grotesk";
+	font-size: 15px;
+	color: #d4cebd;
+}
+.ticketsForm {
+	font-family: "Neufile Grotesk";
+	font-size: 15px;
+	color: #d4cebd;
+}
+
+/*********************************************************/
+/* MAPS PAGE */
+/*************/
+.mapsSection{
+	background-image: url(../img/pattern-dark-secondary.jpg);
+	/* padding: 2vw; */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/*********************************************************/
+/* TICKETS PAGE */
+/****************/
+.formSection{
+	background-image: url(../img/pattern-dark-secondary.jpg);
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.ticketsDiv {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+.dataForm{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.fieldFormDiv{
+	padding: 2vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.field1Form{
+	padding: 20px;
+}
+.field2Form{
+	padding: 20px;
+}
+
+.despliegueLogin {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/pattern-light.jpg);
+}
+
+
+/*********************************************************/
+/* FAQ PAGE */
+/************/
+.faqCardsSection {
+	/* display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center; */
+}
+.faqList{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.cardFaqDiv {
+	/* height: 60%; 	 */
+	/* width: 40%; */
+	max-height: 255px;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    color: #b09a6d; 
+    border-color: #b09a6d; 
+    background-color: #d4cebd;
+	overflow: hidden;
+	padding: 4%;
+    margin: 3%;
+}
+.cardFaqImgDiv {
+	max-width: 50px;
+	max-height: 50px;
+	display: flex; 
+	justify-content: center;
+}
+.cardFaqImg {
+	/* display:block;*/
+	/* width: 10%; */
+	/* max-height: 610%; */
+	vertical-align: middle;
+}
+.cardFaqTitle {
+	/* es un <h5> */
+    font-family: 'Tungsten';
+    font-size: 35px;
+    color: #28282a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

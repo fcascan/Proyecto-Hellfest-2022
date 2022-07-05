@@ -1,6 +1,3 @@
-// import { disablePageScroll, enablePageScroll } from "scroll-lock.js";
-// import lightSlider from "lightslider.js";
-
 $(document).ready(() => {
 	//Funcion que realiza el efecto parralax en los scrollDiv:
 	$(window).scroll(function () {
@@ -17,30 +14,29 @@ $(document).ready(() => {
 	});
 
 	//Funciones que configuran al lightslider (Carousel):
-	$("#lightSlider").lightSlider(); 
+	$("#lightSlider").lightSlider(); 	//Call LightSlider
 	$("#content-slider").lightSlider({
 		loop: false,
 		keyPress: true,
 	});
-	$("#autoWidth").lightSlider({
-		autoWidth: true,
-		loop: true,
-		onSliderLoad: function () {
-			$("#autoWidth").removeClass("cS-hidden");
-		},
-	});
 	//Funciones que realizan el avance y retroceso de Slides del carousel:
-	var slider = $("#publicMethods").lightSlider({
+	let slider = $("#publicMethods").lightSlider({
 		slideMargin: 4,
 		slideWidth: 200,
 		loop: false,
 	});
-	$("#goToPrevSlide").click(function () {
+	// $("#goToPrevSlide").click(function () {
+	// 	slider.goToPrevSlide();
+	// });
+	// $("#goToNextSlide").click(function () {
+	// 	slider.goToNextSlide();
+	// });
+	document.getElementById("goToPrevSlide").onclick = () => {
 		slider.goToPrevSlide();
-	});
-	$("#goToNextSlide").click(function () {
+	};
+	document.getElementById("goToNextSlide").onclick = () => {
 		slider.goToNextSlide();
-	});
+	};
 
 	//Funcion que realiza el efecto de telón que sube al cargar la pagina:
 	function moveCurtain() {
@@ -48,28 +44,29 @@ $(document).ready(() => {
 		let pos = 0;
 		let tInterval = setInterval(frame, 13);
 		function frame() {
-			if (pos == 100) {
-				enablePageScroll($scrollableElement);
+			if (pos <= -125) {
+				// enablePageScroll($scrollableElement);
 				element.style.display = "none";
 				clearInterval(tInterval);
 			} else {
-				// disablePageScroll($scrollableElement);
 				pos--;
-				element.style.top = pos + "%";
+				element.style.top = pos/10 + "%";
 			}
 		}
 	}
-	var $scrollableElement = document.querySelector("body");
+	let $scrollableElement = document.querySelector("body");
+	// disablePageScroll($scrollableElement);
 	moveCurtain();
+	// enablePageScroll($scrollableElement);
 });
 
 //Efecto parallax usado para el fondo del FAQ:
 document.addEventListener("mousemove", parallax);
 function parallax(event) {
-	this.querySelectorAll(".mouse").forEach((shift) => {
-		const position = shift.getAttribute("value");
-		const x = -25 + (window.innerWidth - event.pageX * position) / 70;
-		const y = -450 + (window.innerHeight - event.pageY * position) / 70;
+	this.querySelectorAll(".paralaxImg").forEach((shift) => {
+		const position = shift.getAttribute("paralaxValue");
+		const x = - 40 + (window.innerWidth - event.pageX * position) / 70;
+		const y = + 40 + (window.innerHeight- event.pageY * position) / 70;
 		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
 	});
 }

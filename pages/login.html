@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lineup - HellFest 2022</title>
+		<title>Login - HellFest 2022</title>
 		<link rel="stylesheet" href="../css/estilos.css" />
 	</head>
 	<body>
@@ -45,29 +45,57 @@
 			<div></div>
 		</div>
 
-		
-		<!----------------------------->
-		<!-- SECCION IMAGENES LINEUP -->
-		<!----------------------------->
-		<br /><br /><br /><br /><br />
-		<div
-			style="
-            padding: 2vw;
-				width: 100vw;
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-			"
-		>
-			<a href="../img/lineup1.png"><img src="../img/lineup1.png" alt="Lineup Grill 1" style="height: 145vh; max-width: 95vw"/></a>
-			<img src="../img/lineup2.png" alt="" style="height: 145vh; "/>
-			<a href="../img/lineup3.png"><img src="../img/lineup3.png" alt="Lineup Grill 2" style="height: 145vh; max-width: 95vw"/></a>
-		</div>
+		<!-------------------->
+		<!-- SECCION TITULO -->
+		<!-------------------->
+		<section class="titleSection" style="height: 100%;">
+			<img src="../img/festival-4.jpg" style="width: 100%;" alt="Billeterie" />
+			<br>
+			<span class="filledText">LOGIN</span>
+			<br>
+		</section>
 
-
+        <!------------>
+		<!-- FORM- --->
 		<!------------>
+		<section class="formSection">
+			<br><br>
+			<div>
+				<span class="ticketsSpan">Please, use your credentials to login into your account, or click Register to create an account.</span>
+			</div>
+            <form action="get" style="padding: 2vw;">
+				<div class="dataForm" style="padding: 20px;">
+					<div style="border-color: #d4cebd; padding: 20px;">
+						<label for="email">E-mail: </label> <input type=”text” name="email" maxlength="80" placeholder="hellfest@mail.com" required><br><br>
+						<label for="password">Password: </label> <input type="password" name="fname" maxlength="50" placeholder="******" required><br><br>
+                        <label for="payment">Role: </label>
+						<select name="role" id="roleSelect">
+							<option value="user">User</option>
+							<option value="cash">Personal</option>
+                            <option value="cash">Supplier</option>
+						</select><br><br>
+                        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+							<input type="submit" class="button" name="Submit" value="Login">
+							<button id="clearBtn" class="buttonDark" name="Register" onclick="window.location.href='./register.html#register';">Register</button>
+						</div>
+                        <br>
+                        <a href="mailto:help@hellfest.fr">Forgot your credentials? Click Me!</a> 
+					</div>
+				</div>
+            </form>
+        </section>
+        
+        <!------------------------>
+		<!-- DESPLIEGUE DE INFO -->
+		<!------------------------>
+        <section>
+            <div class="despliegueLogin" id="despliegueLogin" style="height: 40vh;">
+
+            </div>
+
+        </section>
+
+        <!------------>
 		<!-- FOOTER -->
 		<!------------>
 		<footer>
@@ -103,5 +131,6 @@
 			</div>
 			<br />
 		</footer>
-	</body>
+    </body>
 </html>
+    
