@@ -44,7 +44,7 @@ $(document).ready(() => {
 		let pos = 0;
 		let tInterval = setInterval(frame, 13);
 		function frame() {
-			if (pos <= -125) {
+			if (pos <= -150) {
 				// enablePageScroll($scrollableElement);
 				element.style.display = "none";
 				clearInterval(tInterval);
