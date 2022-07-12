@@ -26,8 +26,8 @@
 			<div></div>
 			<div></div>
 			<a href="./lineup.html">LINE UP</a>
-			<a href="#Experience">EXPERIENCE</a>
-			<a href="#Infos">INFOS</a>
+			<a href="./discover.html">EXPERIENCE</a>
+			<a href="../index.html#Infos">INFOS</a>
 			<!-- <a href="#hamburguer" class="hamIcon"><img src="../img/svgexport-3.svg"/></a> -->
 			<input id="hamburguer-toggle" type="checkbox" />
     		<label class='hamburguer-button-container' for="hamburguer-toggle">
@@ -44,6 +44,7 @@
 			</ul>
 			<div></div>
 		</div>
+		<a href="./tickets.html" title="Buy your tickets now!"><img src="../img/svgexport-25.svg" alt="In Here! Buy your Tickets Now!" style="position: fixed; bottom: 2vh; right: 2vw; z-index: 100;"></a>
 
 		<!-------------------->
 		<!-- SECCION TITULO -->
@@ -51,7 +52,7 @@
 		<section class="titleSection" style="height: 100%;">
 			<img src="../img/festival-4.jpg" style="width: 100%;" alt="Billeterie" />
 			<br>
-			<span class="filledText">LOGIN</span>
+			<span class="filledText" style="position: absolute; top: 82%; left: 2%; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #28282a;">LOGIN</span>
 			<br>
 		</section>
 
@@ -63,55 +64,26 @@
 			<div>
 				<span class="ticketsSpan">Please, use your credentials to login into your account, or click Register to create an account.</span>
 			</div>
-            <form action="get" style="padding: 2vw;">
+            <form method="POST" action="login.php" style="padding: 2vw;" action="">
 				<div class="dataForm" style="padding: 20px;">
 					<div style="border-color: #d4cebd; padding: 20px;">
-						<label for="email">E-mail: </label> <input type=”text” name="email" maxlength="80" placeholder="hellfest@mail.com" required><br><br>
-						<label for="password">Password: </label> <input type="password" name="fname" maxlength="50" placeholder="******" required><br><br>
-                        <label for="payment">Role: </label>
-						<select name="role" id="roleSelect">
-							<option value="user">User</option>
-							<option value="cash">Personal</option>
-                            <option value="cash">Supplier</option>
+						<label for="email">E-mail: </label> <input type="email" name="email" id="email" minlength="1" maxlength="50" placeholder="hellfest@mail.com" required><br><br>
+						<label for="pass">Password: </label> <input type="password" name="pass" id="pass" minlength="6" maxlength="50" placeholder="******" pattern="[A-Za-z0-9]{6,16}" required><br><br>
+                        <label for="role">Role: </label>
+						<select name="role" id="role">
+							<option selected value="Comprador">User</option>
+							<option value="Personal">Personal</option>
+                            <option value="Proveedor">Supplier</option>
 						</select><br><br>
                         <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
-							<input type="submit" class="button" name="Submit" value="Login">
-							<button id="clearBtn" class="buttonDark" name="Register" onclick="window.location.href='./register.html#register';">Register</button>
+							<input type="submit" class="button" name="submit" value="Login">
+							<button id="clearBtn" class="buttonDark" name="Register" onclick="window.location.href='./register.html';">Register</button>
 						</div>
                         <br>
                         <a href="mailto:help@hellfest.fr">Forgot your credentials? Click Me!</a> 
 					</div>
 				</div>
             </form>
-        </section>
-        
-        <!------------------------>
-		<!-- DESPLIEGUE DE INFO -->
-		<!------------------------>
-        <section>
-            <div class="despliegueLogin" id="despliegueLogin" style="height: 40vh;">
-			<!--
-				Welcome User
-
-			USER INFO:
-			Nombre Apellido mail Rol
-			tickets a su nombre: cantidad, tipo de pase, metodo de pago, 
-
-			SHOP:
-			Producto	Talle	Cantidad	Monto	Nombre	Apellido	Direccion de mail	Metodo de pago	Lugar de Retiro	Estado
-
-			SOLO PARA PROVEEDORES:
-			Servicio	Fecha de pago acordada	Monto a pagar en USD	Empresa a cargo	Mail Contacto	Persona referente
-
-			SOLO PARA PERSONAL:
-			Consultar LINEUP:::  Bandas/Artistas	Horario del Show	Dia del Show	Escenario	Monto a pagar en USD	Hotel de hospedaje	Contacto	Fecha de arribo	Realiza un sideshow?	Equipo adicional necesario
-			Consultar Stands:::  Tipo de Stand	Descripcion	Tamaño de Stand	Localizacion en Mapa	Precio alquiler Total
-			buscar ticket por ID de compra
-			buscar merch por ID de compra
-			consultar stock restante y precio de merch por nombre y Talle
-			-->
-            </div>
-
         </section>
 
         <!------------>
@@ -136,7 +108,7 @@
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 				>
-				<a href="./toc.html">Term and conditions</a>
+				<a href="./tac.html">Term and conditions</a>
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 				>
