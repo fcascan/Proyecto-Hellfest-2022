@@ -97,7 +97,7 @@
 		font-size: 30px !important;
 	}
 	.filledText {
-		font-size: 37px !important;
+		font-size: 35px !important;
 	}
 	.tungstenFilled {
 		font-size: 30px !important;
@@ -160,7 +160,7 @@ footer {
 }
 
 /* For debbuging purposes only. Comment when done: TODO */
-/* div {
+div {
 	border-color: magenta;
 	border-style: solid;
 	border-width: 1px;
@@ -169,7 +169,7 @@ section {
 	border-color: cyan;
 	border-style: solid;
 	border-width: 1px;
-} */
+}
 
 /*********************************************************/
 /* NAVBAR HAMBURGUER */
@@ -283,17 +283,16 @@ section {
 	transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-
 /*********************************************************/
 /* CAROUSEL Y CARDS */
 /********************/
-.lSSlideOuter{
+/* .lSSlideOuter{ */
 	/* height: 100% !important;  */
-}
-.lSSlideWrapper{
+/* } */
+.lSSlideWrapper {
 	height: 100% !important; 
 }
-.content-slider{
+.content-slider {
 	/* height: 100% !important; */
 	max-height: 326px !important;
     /* transform: translate3d(-540px, 0px, 0px);  */
@@ -542,6 +541,14 @@ section {
 	justify-content: center;
 	align-items: center;
 }
+.centrarDiv{
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
 .merchDiv {
 	overflow: hidden;
 	display: flex;
@@ -605,8 +612,7 @@ section {
 }
 .letsGoToHellImg {
 	position: absolute;
-	max-height: 14vw;
-	min-height: 8vw;
+	max-height: 25vh;
 	top: 75vh;
 	left: 5vw;
 	background-color: transparent;
@@ -843,7 +849,7 @@ a:hover {
 }
 
 /*********************************************************/
-/* SECCION TITULO EN PARTNERS, TOCS, MAPS,  */
+/* SECCION TITULO EN PARTNERS, TACS, MAPS,  */
 /********************************************/
 .titleSection{
 	height: 70vh;
@@ -881,13 +887,13 @@ a:hover {
 }
 
 /*********************************************************/
-/* TOCS PAGE */
+/* TACS PAGE */
 /*************/ 
-.tocsSection{
+.tacsSection{
 	background-image: url(../img/pattern-dark-secondary.jpg);
 	padding: 2vw;
 }
-.tocSpan, .ticketsSpan {
+.tacSpan, .ticketsSpan {
 	font-family: "Neufile Grotesk";
 	font-size: 15px;
 	color: #d4cebd;
@@ -952,7 +958,7 @@ a:hover {
 
 .despliegueLogin {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -963,13 +969,13 @@ a:hover {
 /*********************************************************/
 /* FAQ PAGE */
 /************/
-.faqCardsSection {
+/* .faqCardsSection { */
 	/* display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center; */
-}
+/* } */
 .faqList{
 	display: flex;
 	flex-direction: row;
