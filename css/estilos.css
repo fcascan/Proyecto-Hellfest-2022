@@ -81,7 +81,6 @@
 		min-width: 100vw;
 		min-height: 50px;
 	}
-	
 	.button {
 		width: 116px !important;
 		height: 32px !important;
@@ -286,11 +285,12 @@ section {
 /*********************************************************/
 /* CAROUSEL Y CARDS */
 /********************/
-/* .lSSlideOuter{ */
-	/* height: 100% !important;  */
-/* } */
+/* .lSSlideOuter{
+	overflow: visible !important;
+} */
 .lSSlideWrapper {
 	height: 100% !important; 
+	/* overflow: visible !important; */
 }
 .content-slider {
 	/* height: 100% !important; */
@@ -301,23 +301,18 @@ section {
 	flex-direction: row;
 	flex-wrap: nowrap !important;
 	align-items: center;
+	overflow: visible !important;
 }
-/* ul {
-	height: 100% !important; 
-    list-style: none outside none;
-    padding-left: 0;
-    margin: 0;
-} */
 .lslide{
     /* height: 100% !important;  */
     /* width: 260px;  */
-    margin-right: 10px;   
+    margin-right: 10px;  
+	overflow: visible !important; 
 
 }
 .card {
 	height: 90%; 	
 	max-height: 100%;
-	
 	align-items: center;
 	overflow: hidden;
 	border: 2px;
@@ -364,7 +359,7 @@ section {
 /********/
 .curtainDiv{
 	width: 100vw;
-	height: 90vh;
+	height: 105vh;
 	position: absolute;
 	z-index: 50;
 	background: #1d1d1d;
@@ -468,8 +463,79 @@ section {
 	width: 100vw;
 }
 .infosDiv {
-	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	min-width: 100vw !important;
+	min-height: 85vh !important;
+	max-width: 100vw !important;
+	max-height: 85vh !important;
 	background-image: url("../img/pattern-dark.jpg");
+}
+.splideSlide {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	max-height: 100% !important;
+	min-height: 100% !important;
+	max-width: 80vw !important;
+	overflow: hidden;
+}
+.splideCard {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap !important;
+	justify-content: left  !important;
+	align-items: center !important;
+	height: 85vh;
+	/* min-width: 8vw; */
+	/* width: 14vw;
+	max-width: 14vw; */
+	width: 90vw;
+	/* padding: 0 5% 0 5%; */
+}
+.splideCardLeft {
+	border: 2px;
+	border-color: #b09a6d !important;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	/* height: 80%; */
+	/* max-width: 60vw; */
+	width: 60%;
+	overflow: hidden;
+	/* left: 50%; */
+	left: 5%;
+}
+.splideImg {
+	z-index: 0;
+	position: relative;
+	max-height: 50%;
+	filter: brightness(70%)
+	/* width: auto; */
+	/* overflow: hidden; */
+}
+.splideCardRight {
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: right;
+	align-items: flex-end;
+	max-height: 95%;
+	max-width: 60%;
+	/* min-height: 85vh; */
+	position: absolute;
+	Right: 0%;
+	text-align: right;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #563a46;
 }
 .scrollDiv3 {
 	background-attachment: fixed;
@@ -589,6 +655,8 @@ section {
 }
 
 .saludoFooter{
+	font-family: "Neufile Grotesk";
+	color: #d4cebd;
 	font-size: 12px; 
 	text-align: center
 }
@@ -612,8 +680,8 @@ section {
 }
 .letsGoToHellImg {
 	position: absolute;
-	max-height: 25vh;
-	top: 75vh;
+	max-height: 200px;
+	top: 80vh;
 	left: 5vw;
 	background-color: transparent;
 }
@@ -855,6 +923,17 @@ a:hover {
 	height: 70vh;
 	overflow: hidden;
 	position: relative;
+	/*
+		font-family: "Microgramma D Extended";
+	font-size: 85px;
+    text-align: right;
+	line-height: 80px;
+	background-color: transparent;
+	justify-items: right;
+	position: absolute;
+	top: 3%;
+	right: 6%;
+	*/
 }
 .tituloDiv {
 	top: 50vh;

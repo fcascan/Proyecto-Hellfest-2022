@@ -3,34 +3,29 @@ $(document).ready(() => {
 	$(window).scroll(function () {
 		var wScroll = $(this).scrollTop();
 		$(".scrollDiv1").css({
-			transform: "translateX(" + -(wScroll / 6 - 70) + "vw)",
+			transform: "translateX(" + -(wScroll / 5 - 100) + "vw)",	//con (wScroll / velocidadScroll - offsetX)
 		});
 		$(".scrollDiv2").css({
-			transform: "translateX(" + -(wScroll / 6 - 400) + "vw)",
+			transform: "translateX(" + -(wScroll / 5 - 450) + "vw)",
 		});
 		$(".scrollDiv3").css({
-			transform: "translateX(" + -(wScroll / 6 - 600) + "vw)",
+			transform: "translateX(" + -(wScroll / 6 - 560) + "vw)",
 		});
 	});
 
 	//Funciones que configuran al lightslider (Carousel):
-	$("#lightSlider").lightSlider(); 	//Call LightSlider
-	$("#content-slider").lightSlider({
+	//https://github.com/sachinchoolur/lightslider
+	$("#content-slider").lightSlider(); 	//Call LightSlider
+	let slider = $("#content-slider").lightSlider({
 		loop: false,
 		keyPress: true,
-	});
-	//Funciones que realizan el avance y retroceso de Slides del carousel:
-	let slider = $("#publicMethods").lightSlider({
 		slideMargin: 4,
 		slideWidth: 200,
-		loop: false,
+		enableTouch:true,
+        freeMove:true,
+        swipeThreshold: 40,
 	});
-	// $("#goToPrevSlide").click(function () {
-	// 	slider.goToPrevSlide();
-	// });
-	// $("#goToNextSlide").click(function () {
-	// 	slider.goToNextSlide();
-	// });
+	//Botones que realizan el avance y retroceso de Slides del carousel:
 	document.getElementById("goToPrevSlide").onclick = () => {
 		slider.goToPrevSlide();
 	};
@@ -44,17 +39,18 @@ $(document).ready(() => {
 		let pos = 0;
 		let tInterval = setInterval(frame, 13);
 		function frame() {
-			if (pos <= -150) {
+			if (pos <= -500) {	//Si la posicion del telon es menor a -500px, se detiene el intervalo
 				// enablePageScroll($scrollableElement);
 				element.style.display = "none";
 				clearInterval(tInterval);
 			} else {
 				pos--;
-				element.style.top = pos/10 + "%";
+				element.style.top = pos/15 + "%";	//con (pos / vel), si vel aumenta el scroll es mas lento
 			}
 		}
 	}
-	let $scrollableElement = document.querySelector("body");
+
+	// let $scrollableElement = document.querySelector("body");
 	// disablePageScroll($scrollableElement);
 	moveCurtain();
 	// enablePageScroll($scrollableElement);

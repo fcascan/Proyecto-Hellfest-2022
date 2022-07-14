@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Easter Egg</title>
+		<link rel="stylesheet" href="../css/estilos.css" />
 		<style type="text/css">
 			.dosbox-container {
 				width: 640px;
@@ -17,6 +18,20 @@
 				-moz-animation: showToastyGuy 1s;
 				-o-animation: showToastyGuy 1s;
 				animation: showToastyGuy 1s;
+			}
+			@media only screen and (max-width: 800px) {
+				.sectionFlex {
+					display: flex;
+					flex-wrap: wrap !important;
+					flex-direction: column !important;
+				}
+			}
+			.sectionFlex {
+				display: flex;
+				flex-wrap: nowrap;
+				flex-direction: row;
+				justify-content: space-evenly;
+				align-items: top;
 			}
 			@-webkit-keyframes showToastyGuy {
 				0% {
@@ -83,6 +98,10 @@
 			color: #d4cebd;
 		"
 	>
+		<!----------->
+		<!-- TITLE -->
+		<!----------->
+		<br><br>
 		<h1 style="text-align: center">
 			<span>🐰🥚🐤</span>
 			<span style="color: #ff0000">E</span>
@@ -102,32 +121,34 @@
 			<span style="color: fuchsia">!</span>
 			<span>🤪🤘 🤙</span>
 		</h1>
-		<section
-			style="
-				display: flex;
-				flex-direction: row;
-				justify-content: space-evenly;
-				align-items: center;
-			"
+		<br><br><br>
+
+		<!------------->
+		<!-- CONTENT -->
+		<!------------->
+		<div
+			class="sectionFlex"
 		>
+			<a href="../index.html" title="Back to index!"><img src="../img/arrow-back.png" alt="go back!" style="position: fixed; top: 2vh; left: 2vw; z-index: 100;"></a>
 			<div>
 				<div id="dosbox"></div>
-				<br />
-				<button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
-				<button id="toasty-button">Make it happen</button>
+				<br /><br />
+				<button class="button" onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="buttonDark" id="toasty-button">Make it happen</button>
 			</div>
 			<div>
-				<h2>Details</h2>
+				<h2>Details</h2><br>
 				<ul>
-					<li>DOOM was created in 1993 by John Carmack & John Romero</li>
-					<li>Developer: id Software</li>
-					<li>Category: FPS</li>
-					<li>Age rating: M - Mature</li>
+					<li>DOOM was released on December 10, 1993.</li>
+					<li>Developer: id Software.</li>
+					<li>Category: First-person shooter.</li>
+					<li>Age rating: M - Mature.</li>
 					<li>Platform: PC - DOS</li>
-					<li>License: GNU General Public License</li>
+					<li>License: GNU General Public License v2.0</li>
 				</ul>
-
-				<h2>Controls:</h2>
+				<br><br>
+				<h2>Controls:</h2><br>
 				<ul>
 					<li>Open Menu: ENTER</li>
 					<li>Move: UP, DOWN, LEFT, RIGHT</li>
@@ -138,15 +159,52 @@
 					<li>Strafe: A, D</li>
 					<li>Change Weapons: 1, 2, 3, ...</li>
 				</ul>
-
-				<h2>Source:</h2>
+				<br><br>
+				<h2>Source:</h2><br>
 				<ul>
 					<li>
 						<a href="https://js-dos.com/DOOM/">https://js-dos.com/DOOM/</a>
 					</li>
 				</ul>
 			</div>
-		</section>
+		</div>
+		<br><br><br><br><br><br><br>
+
+		<!------------>
+		<!-- FOOTER -->
+		<!------------>
+		<footer>
+			<br /><br />
+			<div class="sponsorsDiv">
+				<img src="../img/7b5bfc.webp" class="sponsorImg" alt="Weezevent" />
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<img src="../img/f92e58.webp" class="sponsorImg" alt="Arte Concert" />
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<img src="../img/258426.webp" class="sponsorImg" alt="Zégut Radio" />
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<img src="../img/1b2e8b.webp" class="sponsorImg" alt="Crédit Mutuel" />
+			</div>
+			<br /><br />
+			<div class="neufilegroteskSmall">
+				<a href="mailto:info@hellfest.fr">Contact</a>
+				<span
+					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+				>
+				<a href="./tac.html">Term and conditions</a>
+				<span
+					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+				>
+				<a href="./partners.html">Partners</a>
+			</div>
+			<br />
+			<div>
+				<span class="saludoFooter">
+					Web by <a href="https://github.com/fcascan"><b>fcascan</b></a> Productions 2022. Made with tons of 🧉 and dedication.
+				</span>
+			</div>
+			<br />
+		</footer>
+
 		<script
 			type="text/javascript"
 			src="https://js-dos.com/cdn/js-dos-api.js"

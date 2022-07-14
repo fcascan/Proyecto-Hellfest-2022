@@ -88,7 +88,7 @@
 		<section class="titleSection" style="height: 100%;">
 			<img src="../img/festival-4.jpg" style="width: 100%;" alt="Billeterie" />
 			<br>
-			<span class="filledText" style="position: absolute; top: 82%; left: 2%; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #28282a;">REGISTER</span>
+			<span class="filledText" style="position: absolute; top: 82%; left: 2%; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #28282a; font-size: 85px;">REGISTER</span>
 			<br>
 		</section>
 
@@ -121,9 +121,7 @@
 				<img src="../img/1b2e8b.webp" class="sponsorImg" alt="Crédit Mutuel" />
 			</div>
 			<br /><br />
-			<hr />
-			<br /><br />
-			<div>
+			<div class="neufilegroteskSmall">
 				<a href="mailto:info@hellfest.fr">Contact</a>
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
@@ -137,7 +135,7 @@
 			<br />
 			<div>
 				<span class="saludoFooter">
-					Web by fcascan Productions 2022. Made with tons of 🧉 and dedication.
+					Web by <a href="https://github.com/fcascan"><b>fcascan</b></a> Productions 2022. Made with tons of 🧉 and dedication.
 				</span>
 			</div>
 			<br />
