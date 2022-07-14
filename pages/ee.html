@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Easter Egg</title>
+		<style type="text/css">
+			.dosbox-container {
+				width: 640px;
+				height: 400px;
+			}
+			.dosbox-container > .dosbox-overlay {
+				background: url(https://js-dos.com/cdn/DOOM.png);
+			}
+			.show-dan {
+				-webkit-animation: showToastyGuy 1s;
+				-moz-animation: showToastyGuy 1s;
+				-o-animation: showToastyGuy 1s;
+				animation: showToastyGuy 1s;
+			}
+			@-webkit-keyframes showToastyGuy {
+				0% {
+					right: -200px;
+				}
+				40% {
+					right: 0;
+				}
+				60% {
+					right: 0;
+				}
+				100% {
+					right: -200px;
+				}
+			}
+			@-moz-keyframes showToastyGuy {
+				0% {
+					right: -200px;
+				}
+				40% {
+					right: 0;
+				}
+				60% {
+					right: 0;
+				}
+				100% {
+					right: -200px;
+				}
+			}
+			@-o-keyframes showToastyGuy {
+				0% {
+					right: -200px;
+				}
+				40% {
+					right: 0;
+				}
+				60% {
+					right: 0;
+				}
+				100% {
+					right: -200px;
+				}
+			}
+			@keyframes showToastyGuy {
+				0% {
+					right: -200px;
+				}
+				40% {
+					right: 0;
+				}
+				60% {
+					right: 0;
+				}
+				100% {
+					right: -200px;
+				}
+			}
+		</style>
+	</head>
+	
+	<body
+		style="
+			background-image: url(../img/pattern-dark-secondary.jpg);
+			color: #d4cebd;
+		"
+	>
+		<h1 style="text-align: center">
+			<span>🐰🥚🐤</span>
+			<span style="color: #ff0000">E</span>
+			<span style="color: #ff4500">A</span>
+			<span style="color: #ffa500">S</span>
+			<span style="color: #ffff00">T</span>
+			<span style="color: #9acd32">E</span>
+			<span style="color: #359b64">R</span>ㅤ
+			<span style="color: green">E</span>
+			<span style="color: teal">G</span>
+			<span style="color: turquoise">G</span>ㅤ
+			<span style="color: blue">F</span>
+			<span style="color: indigo">O</span>
+			<span style="color: blueviolet">U</span>
+			<span style="color: violet">N</span>
+			<span style="color: pink">D</span>
+			<span style="color: fuchsia">!</span>
+			<span>🤪🤘 🤙</span>
+		</h1>
+		<section
+			style="
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				align-items: center;
+			"
+		>
+			<div>
+				<div id="dosbox"></div>
+				<br />
+				<button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+				<button id="toasty-button">Make it happen</button>
+			</div>
+			<div>
+				<h2>Details</h2>
+				<ul>
+					<li>DOOM was created in 1993 by John Carmack & John Romero</li>
+					<li>Developer: id Software</li>
+					<li>Category: FPS</li>
+					<li>Age rating: M - Mature</li>
+					<li>Platform: PC - DOS</li>
+					<li>License: GNU General Public License</li>
+				</ul>
+
+				<h2>Controls:</h2>
+				<ul>
+					<li>Open Menu: ENTER</li>
+					<li>Move: UP, DOWN, LEFT, RIGHT</li>
+					<li>Use: W</li>
+					<li>Fire: S</li>
+					<li>Speed on: SPACE</li>
+					<li>Strafe on: ALT</li>
+					<li>Strafe: A, D</li>
+					<li>Change Weapons: 1, 2, 3, ...</li>
+				</ul>
+
+				<h2>Source:</h2>
+				<ul>
+					<li>
+						<a href="https://js-dos.com/DOOM/">https://js-dos.com/DOOM/</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<script
+			type="text/javascript"
+			src="https://js-dos.com/cdn/js-dos-api.js"
+		></script>
+		<script type="text/javascript">
+			var dosbox = new Dosbox({
+				id: "dosbox",
+				onload: function (dosbox) {
+					dosbox.run("../js/ee.zip", "./DOOM/DOOM.EXE");
+				},
+				onrun: function (dosbox, app) {
+					console.log("App '" + app + "' is runned");
+				},
+			});
+		</script>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/dan.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("body").toasty();
+				$("#toasty-button").click(function () {
+					$("body").toasty("pop");
+				});
+			});
+			(function () {
+				var timesRun = 0;
+				var runLimit = 10;
+				i = 0;
+				function updateCounter() {
+					if (timesRun < runLimit) {
+						var timeout = 180000 * Math.random() + 30000; // random timeout from 3min to 30secs
+						setTimeout(function () {
+							$("body").toasty("pop");
+							timesRun++;
+							updateCounter();
+						}, timeout);
+					}
+				}
+				updateCounter();
+			})();
+		</script>
+	</body>
+</html>

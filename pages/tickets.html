@@ -51,7 +51,7 @@
 		<section class="titleSection" style="height: 100%;">
 			<img src="../img/billets-1400x933.jpg" style="width: 100%;" alt="Billeterie" />
 			<br>
-			<span class="filledText">TICKETS</span>
+			<span class="filledText" style="position: absolute; top: 82%; left: 2%; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #28282a;">TICKETS</span>
 			<br>
 		</section>
 
@@ -63,17 +63,17 @@
 			<div>
 				<span class="ticketsSpan">Please, submit your request with the following form, and a member of the sales team will contact you as soon as possible.</span>
 			</div>
-            <form class="ticketsForm" action="post" style="padding: 2vw;">
-				<div class="dataForm" style="padding: 20px; ">
+            <form class="ticketsForm" action="tickets.php" method="POST" style="padding: 2vw;">
+				<div class="dataForm" style="padding: 20px;">
 					<div>
-						<label for="name">Name: </label> <input type=”text” name="name" maxlength="50" placeholder="Ronnie James" required><br><br>
-						<label for="fname">First Name: </label> <input type=”text” name="fname" maxlength="50" placeholder="Dio Padavona" required><br><br>
-						<label for="email">E-mail: </label> <input type=”text” name="email" maxlength="80" placeholder="hellfest@mail.com" required><br><br>
-						<label for="phone">Phone: </label> <input type=”text” name="phone" maxlength="15" placeholder="+54 9 1132123100" required><br><br>
+						<label for="name">Name: </label> <input type="text" name="name" id="name" minlength="1" maxlength="50" placeholder="Ronnie James" required><br><br>
+						<label for="fname">First Name: </label> <input type="text" name="fname" id="fname" minlength="1" maxlength="50" placeholder="Dio Padavona" required><br><br>
+						<label for="email">E-mail: </label> <input type="email" name="email" id="email" minlength="1" maxlength="80" placeholder="hellfest@mail.com" required><br><br>
+						<label for="phone">Phone: </label> <input type="text" name="phone" maxlength="20" placeholder="+54 9 1132145699"><br><br>
 						<label for="payment">Payment Choice: </label>
-						<select name="payment" id="paymentSelect">
-							<option value="creditCard">Credit Card</option>
-							<option value="cash">Cash on the Billeterie</option>
+						<select name="payment" id="payment">
+							<option selected value="TARJETA">Credit Card</option>
+							<option value="EFECTIVO">Cash on the Billeterie</option>
 						</select>
 					</div>
 				</div>
@@ -82,12 +82,12 @@
 						<legend style="font-size: larger;">ㅤHellfest Part 1:ㅤ17 - 19 Juin 2022ㅤ</legend>
 						<label for="quantity1">Quantity of Passes (Max. 10): </label> <input type="number" name="quantity1" id="quantity1" min="1" max="10" minlength="1" maxlength="10" value="1" required><br><br>
 						<label for="pass1"> Type of Pass:</label>
-						<select name="pass1" id="pass1Select">
-							<option value="1" selected>1-day pass</option>
-							<option value="3">3-day pass</option>
-						</select><span  id="individualPrice1"> 1x $105 </span><br><br>
+						<select name="pass1" id="pass1">
+							<option selected value="1-day pass">1-day pass</option>
+							<option value="3-day pass">3-day pass</option>
+						</select><span id="individualPrice1"> 1x $105 </span><br><br>
 						<span id="priceSpan1">Price: $105 </span><br><br>
-						<label for="tocsToggle">I declare that I accept the <a href="./toc.html" style="text-decoration: underline;">TOCs</a> of the Festival </label><input id="tocsToggle" type="checkbox" /><br><br>
+						<label for="tacsToggle">I declare that I accept the <a href="./tac.html" style="text-decoration: underline;">TACs</a> of the Festival </label><input name="tacsToggle1" id="tacsToggle1" type="checkbox" /><br><br>
 						<div style="display: flex; flex-direction: row; justify-content: center;">
 							<input type="submit" class="button" name="Submit1" value="Buy Now!">
 						</div>
@@ -96,12 +96,12 @@
 						<legend style="font-size: larger;">ㅤHellfest Part 2:ㅤ23 - 26 Juin 2022ㅤ</legend>
 						<label for="quantity2">Quantity of Passes (Max. 10): </label> <input type="number" name="quantity2" id="quantity2" min="1" max="10" minlength="1" maxlength="10" value="1" required><br><br>
 						<label for="pass2"> Type of Pass:</label>
-						<select name="pass2" id="pass2Select">
-							<option value="1" selected>1-day pass</option>
-							<option value="4">4-day pass</option>
-						</select><span  id="individualPrice2"> 1x $105 </span><br><br>
-						<span  id="priceSpan2">Price: $105 </span><br><br>
-						<label for="tocsToggle">I declare that I accept the <a href="./toc.html" style="text-decoration: underline;">TOCs</a> of the Festival </label><input id="tocsToggle" type="checkbox" /><br><br>
+						<select name="pass2" id="pass2">
+							<option selected value="1-day pass">1-day pass</option>
+							<option value="4-day pass">4-day pass</option>
+						</select><span id="individualPrice2"> 1x $105 </span><br><br>
+						<span id="priceSpan2">Price: $105 </span><br><br>
+						<label for="tacsToggle">I declare that I accept the <a href="./tac.html" style="text-decoration: underline;">TACs</a> of the Festival </label><input name="tacsToggle2" id="tacsToggle2" type="checkbox" /><br><br>
 						<div style="display: flex; flex-direction: row; justify-content: center;">
 							<input type="submit" class="button" name="Submit2" value="Buy Now!">
 						</div>
@@ -132,7 +132,7 @@
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 				>
-				<a href="./toc.html">Term and conditions</a>
+				<a href="./tac.html">Term and conditions</a>
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
 				>

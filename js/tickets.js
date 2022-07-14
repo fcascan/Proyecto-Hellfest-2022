@@ -1,12 +1,11 @@
-
 //Actualizador de montos en tiempo real:
 let quantity1 = document.getElementById("quantity1");
-let pass1 = document.getElementById("pass1Select");
+let pass1 = document.getElementById("pass1");
 let price1 = document.getElementById("priceSpan1");
 let individualPrice1 = document.getElementById("individualPrice1");
 
 let quantity2 = document.getElementById("quantity2");
-let pass2 = document.getElementById("pass2Select");
+let pass2 = document.getElementById("pass2");
 let price2 = document.getElementById("priceSpan2");
 let individualPrice2 = document.getElementById("individualPrice2");
 
