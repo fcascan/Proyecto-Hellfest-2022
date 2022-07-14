@@ -54,6 +54,9 @@
 		<link rel="stylesheet" href="./css/lightslider.css" />
 		<script src="./js/jquery-3.6.0.min.js"></script>
 		<script type="module" src="./js/lightslider.js"></script>
+		<!-- SplideJS  -->
+		<link rel="stylesheet" href="./css/splide.min.css">
+		<script src="./js/splide.min.js"></script>
 		<!-- Mis Scripts: -->
 		<script type="module" src="./js/scroll-lock.js"></script>
 		<script type="text/javascript" src="./js/index.js"></script>
@@ -62,9 +65,9 @@
 		<!---------------->
 		<!-- Curtain FX -->
 		<!---------------->
-		<div class="curtainDiv" id="curtain">
-			<img class="curtainLogo" src="./img/svgexport-2.svg" />
-			<img src="./img/pattern-light.jpg" style="width: 100%" />
+		<div class="curtainDiv" id="curtain" style="background-image: url('../img/pattern-light.jpg');">
+			<img class="curtainLogo" src="./img/svgexport-2.svg" style="transform: translateY(-40%);"/>
+			<!-- <img src="./img/pattern-light.jpg" style="width: 100%" /> -->
 		</div>
 
 		<!------------>
@@ -153,11 +156,8 @@
 					<img src="./img/svgexport-15.svg" />
 				</button>
 				<br /><br />
-				<button
-					id="goToPrevSlide" class="carouselArrows"
-					style="background-color: transparent; transform: rotate(180deg);"
-				>
-					<img src="./img/svgexport-15.svg" />
+				<button	id="goToPrevSlide" class="carouselArrows" style="background-color: transparent">
+					<img src="./img/svgexport-15-left.svg" />
 				</button>
 			</div>
 				<!-- Extraido de: http://sachinchoolur.github.io/lightslider/index.html -->
@@ -193,7 +193,7 @@
 											THRASH METAL
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 26</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 26</button>
 									</div>
 								</div>
 							</li>
@@ -214,7 +214,7 @@
 											HARD ROCK
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 25</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 25</button>
 									</div>
 								</div>
 							</li>
@@ -235,7 +235,7 @@
 											INDUSTRIAL METAL
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 24</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 24</button>
 									</div>
 								</div>
 							</li>
@@ -256,7 +256,7 @@
 											HARD-ROCK
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 23</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 23</button>
 									</div>
 								</div>
 							</li>
@@ -277,7 +277,7 @@
 											DEATH METAL
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 19</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 19</button>
 									</div>
 								</div>
 							</li>
@@ -298,7 +298,7 @@
 											HEAVY POP
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 18</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 18</button>
 									</div>
 								</div>
 							</li>
@@ -319,7 +319,7 @@
 											NEO METAL
 										</p>
 										<br />
-										<button href="#Lineup" class="cardButton">JUNE 17</button>
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">JUNE 17</button>
 									</div>
 								</div>
 							</li>
@@ -332,8 +332,8 @@
 										alt="View the full line up"
 										/>
 									</div>									
-									<div class="cardBody" style="height: 50%">
-										<button href="#" class="cardButton">
+									<div class="cardBody" style="transform: translateY(-20%);">
+										<button class="cardButton" onclick="window.location.href='./pages/lineup.html';">
 											DISCOVER THE FULL LINE UP
 										</button>
 									</div>
@@ -408,7 +408,225 @@
 		<!-- INFOS -->
 		<!----------->
 		<br /><br />
-		<section class="infosDiv" id="Infos">CAROUSEL WITH INFO (TODO)</section>
+		<section class="infosDiv" id="Infos">
+			<div class="splide" role="group" aria-label="Infos Carousel" data-splide='{
+				"type":"loop",
+				"perPage":1,
+				"perMove":1,
+				"rewind":true,
+				"fixedWidth":true,
+				"start":0,
+				"trimspaces":false,
+				"gap":40,
+				"pagination":false,
+				"focus":"center",
+				"flickMaxPages":1,
+				"waitForTransition": true,
+				"rewindByDrag": true,
+				"drag":true,
+				"flickPower":100,
+				"arrows":true,
+				"autoplay":true,
+				"rewindSpeed": 0
+			}'>
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide ">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/cashless-1-1400x933.jpg" alt="cashless"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										CASHLESS<br>
+										PRE-LOADING
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										No Cash in Hell !
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/ghost-1400x778.jpg" alt="Ghost!"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										NEW ANNOUNCEMENT<br> + RUNNING ORDER
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br />
+									<span class="neufilegroteskSmall">
+										Hellbangers ! The wait is over, we are happy to announce that GHOST will join the party on […]
+									</span><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/watain-off-road-en-1-1400x788.jpg" alt="WATAIN off the road!"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										OFF THE ROAD – WATAIN
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										Our new livestream with Arte Concert, first one is with WATAIN !
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/helltour-web-1400x1209.jpg" alt="HELL’TOUR ACTIVITIES"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										HELL’TOUR : ACTIVITIES BETWEN TWO WEEKENDS
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										As you know, this year, Hellfest is taking place on 2 weekends with a break from Monday 21 […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/camping-easycamp-1400x933.jpg" alt="EASY CAMP"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										EASY CAMP : OPENING BOOKING
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										Reservations for Easy Camp will open next Thursday, March 17 at 1pm ON THIS PAGE Important : The […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/poster-H-XV-933x1400.jpg" alt="A New Hope"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										A NEW HOPE
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										Hellbangers, as you can imagine, organizing this edition in these troubled times feels is quite a challenge. Several […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/lock-1400x933.jpg" alt="LOCKERS BOOKING"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										LOCKERS BOOKING
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										Booking for lockers will open on February 28th – 6.00pm To access the reservations on the day, go […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/flaine-1400x933.jpg" alt="FIRE & ICE PARTY"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										FIRE & ICE PARTY
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										Hellfest meets the French Alps for the first time !
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/newsapp-1400x933.jpg" alt="HELLFEST 2022 MOBILE APP"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										HELLFEST 2022 MOBILE APP
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										The official HELLFEST 2022 App is now available for your smartphones! Available FOR FREE on ANDROID (CLICK HERE) […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/Entree-Cathedrale-Nuit-Hellfest-2022-©David-Gallard-2-1400x787.jpg" alt="CASHLESS : SUPPORT YOUR CAUSE"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										CASHLESS : SUPPORT YOUR CAUSE
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										The refund option of your cashless account is now activated, you have until Sunday July 10th 2022 midnight […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+						<li class="splide__slide splideSlide">
+							<div class="splideCard">
+								<div class="splideCardLeft">
+									<img class="splideImg" src="./img/ANIMAGREEN-1400x787.jpg" alt="WASTE SORTING CONTEST"><br>
+								</div>
+								<div class="splideCardRight">
+									<span class="filledText">
+										WASTE SORTING CONTEST
+									</span><br />
+									<img class="separador" src="./img/svgexport-12.svg" /><br /><br />
+									<span class="neufilegroteskSmall">
+										For more than 15 years, Hellfest and its local partners have been striving to implement innovative solutions to […]
+									</span><br><br><br>
+									<button class="button" onclick="window.location.href='./pages/discover.html';">READ MORE</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			  </div>
+		
+		
+		
+		
+		</section>
 
 		<!------------------->
 		<!-- SCROLL BEYOND -->
@@ -442,7 +660,7 @@
 		<!------------------>
 		<!-- SHOP SECTION -->
 		<!------------------>
-		<br /><br />
+		<br />
 		<section class="shopDiv">			
 			<div class="shopInfoDiv">
 				<span class="neufilegroteskDarkSmall">OFFICIAL MERCH</span><br />
@@ -627,8 +845,6 @@
 				<img src="./img/1b2e8b.webp" class="sponsorImg" alt="Crédit Mutuel" />
 			</div>
 			<br /><br />
-			<hr />
-			<br /><br />
 			<div class="neufilegroteskSmall">
 				<a href="mailto:info@hellfest.fr">Contact</a>
 				<span
@@ -643,10 +859,16 @@
 			<br />
 			<div>
 				<span class="saludoFooter">
-					Web by fcascan Productions 2022. Made with tons of 🧉 and dedication.
+					Web by <a href="https://github.com/fcascan"><b>fcascan</b></a> Productions 2022. Made with tons of 🧉 and dedication.
 				</span>
 			</div>
 			<br />
 		</footer>
+		<script>
+			document.addEventListener( 'DOMContentLoaded', function() {
+				var splide = new Splide( '.splide' );
+				splide.mount();
+			} );
+		</script>
 	</body>
 </html>

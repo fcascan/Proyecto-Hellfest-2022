@@ -52,7 +52,7 @@
 		<section class="titleSection" style="height: 100%;">
 			<img src="../img/festival-4.jpg" style="width: 100%;" alt="Billeterie" />
 			<br>
-			<span class="filledText" style="position: absolute; top: 82%; left: 2%; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #28282a;"">REGISTER</span>
+			<span class="filledText" style="position: absolute; top: 82%; left: 2%; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #28282a; font-size: 85px;">REGISTER</span>
 			<br>
 		</section>
 
@@ -65,27 +65,29 @@
 				<span class="ticketsSpan">Welcome! Please enter the required info below to begin creating your secure Hellfest account.</span>
 			</div>
             <form action="registration.php" method="POST" style="padding: 2vw;">
-				<div class="dataForm" style="padding: 20px;">
-					<div style="border-color: #d4cebd; padding: 20px;">
-						<label for="name">Name: </label> <input type="text" name="name" id="name" minlength="1" maxlength="50" placeholder="Ronnie James" required><br><br>
-                        <label for="fname">First Name: </label> <input type="text" name="fname" id="fname" minlength="1" maxlength="50" placeholder="Dio Padavona" required><br><br>
-						<label for="email">E-mail: </label> <input type="email" name="email" id="email" minlength="1" maxlength="50" placeholder="hellfest@mail.com" required><br><br>
-						<label for="pass">Password (alphanumeric, 6-16 characters): </label> <input type="password" name="pass" id="pass" minlength="6" maxlength="50" placeholder="******" pattern="[A-Za-z0-9]{6,16}" required><br><br>
-                        <label for="passRepeat">Repeat Password: </label> <input type="password" name="passRepeat" id="passRepeat" minlength="6" maxlength="50" placeholder="******" pattern="[A-Za-z0-9]{6,16}" required><br><br>
-                        <label for="payment">Role: </label>
-						<select name="role" id="role">
-							<option selected value="" disabled hidden>Choose type of user</option>
-							<option value="Comprador">User</option>
-							<option value="Personal">Personal</option>
-                            <option value="Proveedor">Supplier</option>
-						</select><br><br>
-                        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
-							<input type="submit" class="button" name="submit" id="submit" value="Create an Account">
+				<fieldset class="ticketsSpan">
+					<div class="dataForm" style="padding: 20px;">
+						<div style="border-color: #d4cebd; padding: 20px;">
+							<label for="name">Name: </label> <input type="text" name="name" id="name" minlength="1" maxlength="50" placeholder="Ronnie James" required><br><br>
+							<label for="fname">First Name: </label> <input type="text" name="fname" id="fname" minlength="1" maxlength="50" placeholder="Dio Padavona" required><br><br>
+							<label for="email">E-mail: </label> <input type="email" name="email" id="email" minlength="1" maxlength="50" placeholder="hellfest@mail.com" required><br><br>
+							<label for="pass">Password (alphanumeric, 6-16 characters): </label> <input type="password" name="pass" id="pass" minlength="6" maxlength="50" placeholder="******" pattern="[A-Za-z0-9]{6,16}" required><br><br>
+							<label for="passRepeat">Repeat Password: </label> <input type="password" name="passRepeat" id="passRepeat" minlength="6" maxlength="50" placeholder="******" pattern="[A-Za-z0-9]{6,16}" required><br><br>
+							<label for="payment">Role: </label>
+							<select name="role" id="role">
+								<option selected value="" disabled hidden>Choose type of user</option>
+								<option value="Comprador">User</option>
+								<option value="Personal">Personal</option>
+								<option value="Proveedor">Supplier</option>
+							</select><br><br>
+							<div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+								<input type="submit" class="button" name="submit" id="submit" value="CREATE AN ACCOUNT">
+							</div>
+							<br>
+							<a href="mailto:help@hellfest.fr">Need Help? Click Me!</a> 
 						</div>
-                        <br>
-                        <a href="mailto:help@hellfest.fr">Need Help? Click Me!</a> 
 					</div>
-				</div>
+				</fieldset>
             </form>
             <a class="ticketsSpan" href="./login.html" style="font-size: larger; font-weight: bolder;">	← Back to Login Screen.</span><br><br>
         </section>
@@ -105,9 +107,7 @@
 				<img src="../img/1b2e8b.webp" class="sponsorImg" alt="Crédit Mutuel" />
 			</div>
 			<br /><br />
-			<hr />
-			<br /><br />
-			<div>
+			<div class="neufilegroteskSmall">
 				<a href="mailto:info@hellfest.fr">Contact</a>
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
@@ -121,7 +121,7 @@
 			<br />
 			<div>
 				<span class="saludoFooter">
-					Web by fcascan Productions 2022. Made with tons of 🧉 and dedication.
+					Web by <a href="https://github.com/fcascan"><b>fcascan</b></a> Productions 2022. Made with tons of 🧉 and dedication.
 				</span>
 			</div>
 			<br />

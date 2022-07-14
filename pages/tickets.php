@@ -162,9 +162,7 @@
 				<img src="../img/1b2e8b.webp" class="sponsorImg" alt="Crédit Mutuel" />
 			</div>
 			<br /><br />
-			<hr />
-			<br /><br />
-			<div>
+			<div class="neufilegroteskSmall">
 				<a href="mailto:info@hellfest.fr">Contact</a>
 				<span
 					>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
@@ -178,7 +176,7 @@
 			<br />
 			<div>
 				<span class="saludoFooter">
-					Web by fcascan Productions 2022. Made with tons of 🧉 and dedication.
+					Web by <a href="https://github.com/fcascan"><b>fcascan</b></a> Productions 2022. Made with tons of 🧉 and dedication.
 				</span>
 			</div>
 			<br />
